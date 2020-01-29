@@ -49,7 +49,9 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
     mv /tmp/slaves $HADOOP_HOME/etc/hadoop/slaves && \
     mv /tmp/start-hadoop.sh ~/start-hadoop.sh
 
-COPY HiBench /root/HiBench
+#----- Copy bechmarks and conex code -----
+ADD HiBench /root/HiBench
+ADD conexer /root/conexer
 
 #----- Set new workdir to HiBench -----
 WORKDIR /root/HiBench

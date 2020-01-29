@@ -1,0 +1,40 @@
+DIGEST 5f288b4c4982108194695ed31c3870c5
+FTop.core_config_test
+R15:25 Top.core_config <> <> lib
+R43:50 Top.env_desc <> <> lib
+R68:72 Coq.omega.Omega <> <> lib
+def 1022:1034 <> a_core_config
+R1037:1046 Top.core_config <> CoreConfig rec
+R1100:1113 Top.core_config <> mk_core_config constr
+R1416:1441 Top.core_config_fields ipc_maximum_data_length mk def
+R1450:1454 Coq.Init.Datatypes <> false constr
+R1351:1382 Top.core_config_fields io_seqfile_sorter_recordlimit mk def
+R1385:1389 Coq.Init.Datatypes <> false constr
+R1286:1317 Top.core_config_fields io_seqfile_compress_blocksize mk def
+R1320:1324 Coq.Init.Datatypes <> false constr
+R1239:1258 Top.core_config_fields io_map_index_skip mk def
+R1268:1272 Coq.Init.Datatypes <> false constr
+R1183:1206 Top.core_config_fields io_map_index_interval mk def
+R1212:1216 Coq.Init.Datatypes <> false constr
+R1120:1141 Top.core_config_fields io_file_buffer_size mk def
+R1154:1158 Coq.Init.Datatypes <> false constr
+R1491:1491 Coq.Init.Logic <> I constr
+R1100:1113 Top.core_config <> mk_core_config constr
+R1416:1441 Top.core_config_fields ipc_maximum_data_length mk def
+R1450:1454 Coq.Init.Datatypes <> false constr
+R1351:1382 Top.core_config_fields io_seqfile_sorter_recordlimit mk def
+R1385:1389 Coq.Init.Datatypes <> false constr
+R1286:1317 Top.core_config_fields io_seqfile_compress_blocksize mk def
+R1320:1324 Coq.Init.Datatypes <> false constr
+R1239:1258 Top.core_config_fields io_map_index_skip mk def
+R1268:1272 Coq.Init.Datatypes <> false constr
+R1183:1206 Top.core_config_fields io_map_index_interval mk def
+R1212:1216 Coq.Init.Datatypes <> false constr
+R1120:1141 Top.core_config_fields io_file_buffer_size mk def
+R1154:1158 Coq.Init.Datatypes <> false constr
+R1491:1491 Coq.Init.Logic <> I constr
+R1491:1491 Coq.Init.Logic <> I constr
+R1491:1491 Coq.Init.Logic <> I constr
+R1491:1491 Coq.Init.Logic <> I constr
+R1491:1491 Coq.Init.Logic <> I constr
+R1491:1491 Coq.Init.Logic <> I constr

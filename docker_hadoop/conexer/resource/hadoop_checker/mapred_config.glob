@@ -1,0 +1,203 @@
+DIGEST 768367637193070f023b07836fb0428c
+FTop.mapred_config
+R15:34 Top.mapred_config_fields <> <> lib
+R52:59 Top.env_desc <> <> lib
+R77:80 Coq.Lists.List <> <> lib
+R146:162 Coq.ZArith.BinInt <> <> lib
+constr 259:274 <> mk_mapred_config
+rec 243:254 <> MapRedConfig
+proj 280:301 <> mapred_child_java_opts
+proj 335:359 <> mapreduce_ifile_readahead
+proj 396:426 <> mapreduce_ifile_readahead_bytes
+proj 469:513 <> mapreduce_input_fileinputformat_split_maxsize
+proj 570:614 <> mapreduce_input_fileinputformat_split_minsize
+proj 671:713 <> mapreduce_input_lineinputformat_linespermap
+proj 768:793 <> mapreduce_job_counters_max
+proj 831:856 <> mapreduce_job_jvm_numtasks
+proj 894:926 <> mapreduce_job_max_split_locations
+proj 971:1014 <> mapreduce_job_reduce_slowstart_completedmaps
+proj 1070:1123 <> mapreduce_job_reducer_unconditional__preempt_delay_sec
+proj 1189:1219 <> mapreduce_job_running_map_limit
+proj 1262:1295 <> mapreduce_job_running_reduce_limit
+proj 1341:1389 <> mapreduce_job_speculative_minimum__allowed__tasks
+proj 1450:1502 <> mapreduce_job_speculative_retry__after__no__speculate
+proj 1567:1615 <> mapreduce_job_speculative_retry__after__speculate
+proj 1676:1733 <> mapreduce_job_speculative_speculative__cap__running__tasks
+proj 1803:1858 <> mapreduce_job_speculative_speculative__cap__total__tasks
+proj 1926:1961 <> mapreduce_job_split_metainfo_maxsize
+proj 2009:2037 <> mapreduce_job_ubertask_enable
+proj 2078:2107 <> mapreduce_job_ubertask_maxmaps
+proj 2149:2181 <> mapreduce_job_ubertask_maxreduces
+proj 2226:2270 <> mapreduce_jobtracker_expire_trackers_interval
+proj 2327:2360 <> mapreduce_jobtracker_handler_count
+proj 2406:2441 <> mapreduce_jobtracker_maxtasks_perjob
+proj 2489:2525 <> mapreduce_jobtracker_taskcache_levels
+proj 2574:2597 <> mapreduce_map_cpu_vcores
+proj 2633:2655 <> mapreduce_map_java_opts
+proj 2690:2712 <> mapreduce_map_memory_mb
+proj 2747:2775 <> mapreduce_map_output_compress
+proj 2816:2850 <> mapreduce_map_output_compress_codec
+proj 2897:2925 <> mapreduce_map_skip_maxrecords
+proj 2966:3003 <> mapreduce_map_skip_proc_count_autoincr
+proj 3053:3084 <> mapreduce_map_sort_spill_percent
+proj 3128:3152 <> mapreduce_map_speculative
+proj 3189:3230 <> mapreduce_output_fileoutputformat_compress
+proj 3284:3331 <> mapreduce_output_fileoutputformat_compress_codec
+proj 3391:3437 <> mapreduce_output_fileoutputformat_compress_type
+proj 3496:3522 <> mapreduce_reduce_cpu_vcores
+proj 3561:3597 <> mapreduce_reduce_input_buffer_percent
+proj 3646:3671 <> mapreduce_reduce_java_opts
+proj 3709:3749 <> mapreduce_reduce_markreset_buffer_percent
+proj 3802:3827 <> mapreduce_reduce_memory_mb
+proj 3865:3902 <> mapreduce_reduce_merge_inmem_threshold
+proj 3952:3996 <> mapreduce_reduce_shuffle_input_buffer_percent
+proj 4053:4097 <> mapreduce_reduce_shuffle_memory_limit_percent
+proj 4154:4191 <> mapreduce_reduce_shuffle_merge_percent
+proj 4241:4279 <> mapreduce_reduce_shuffle_parallelcopies
+proj 4330:4362 <> mapreduce_shuffle_max_connections
+proj 4407:4435 <> mapreduce_shuffle_max_threads
+proj 4476:4513 <> mapreduce_shuffle_transfer_buffer_size
+proj 4563:4601 <> mapreduce_task_combine_progress_records
+proj 4652:4680 <> mapreduce_task_io_sort_factor
+proj 4721:4745 <> mapreduce_task_io_sort_mb
+proj 4782:4818 <> mapreduce_task_merge_progress_records
+proj 4867:4893 <> mapreduce_task_profile_maps
+proj 4932:4961 <> mapreduce_task_profile_reduces
+proj 5003:5036 <> mapreduce_tasktracker_http_threads
+proj 5082:5116 <> mapreduce_tasktracker_indexcache_mb
+proj 5163:5201 <> mapreduce_tasktracker_map_tasks_maximum
+proj 5252:5293 <> mapreduce_tasktracker_reduce_tasks_maximum
+proj 5347:5404 <> mapreduce_tasktracker_taskmemorymanager_monitoringinterval
+proj 5474:5508 <> yarn_app_mapreduce_am_command__opts
+proj 5555:5619 <> yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size
+proj 5696:5748 <> yarn_app_mapreduce_am_job_task_listener_thread__count
+proj 5813:5854 <> yarn_app_mapreduce_am_resource_cpu__vcores
+proj 5908:5940 <> yarn_app_mapreduce_am_resource_mb
+proj 6061:6080 <> maxsplit_lt_minsplit
+proj 6501:6511 <> uber_const1
+proj 6742:6752 <> uber_const2
+proj 6987:6997 <> uber_const3
+proj 7246:7256 <> uber_const4
+R304:331 Top.mapred_config_fields mapred_child_java_opts ftype def
+R362:392 Top.mapred_config_fields mapreduce_ifile_readahead ftype def
+R429:465 Top.mapred_config_fields mapreduce_ifile_readahead_bytes ftype def
+R516:566 Top.mapred_config_fields mapreduce_input_fileinputformat_split_maxsize ftype def
+R617:667 Top.mapred_config_fields mapreduce_input_fileinputformat_split_minsize ftype def
+R716:764 Top.mapred_config_fields mapreduce_input_lineinputformat_linespermap ftype def
+R796:827 Top.mapred_config_fields mapreduce_job_counters_max ftype def
+R859:890 Top.mapred_config_fields mapreduce_job_jvm_numtasks ftype def
+R929:967 Top.mapred_config_fields mapreduce_job_max_split_locations ftype def
+R1017:1066 Top.mapred_config_fields mapreduce_job_reduce_slowstart_completedmaps ftype def
+R1126:1185 Top.mapred_config_fields mapreduce_job_reducer_unconditional__preempt_delay_sec ftype def
+R1222:1258 Top.mapred_config_fields mapreduce_job_running_map_limit ftype def
+R1298:1337 Top.mapred_config_fields mapreduce_job_running_reduce_limit ftype def
+R1392:1446 Top.mapred_config_fields mapreduce_job_speculative_minimum__allowed__tasks ftype def
+R1505:1563 Top.mapred_config_fields mapreduce_job_speculative_retry__after__no__speculate ftype def
+R1618:1672 Top.mapred_config_fields mapreduce_job_speculative_retry__after__speculate ftype def
+R1736:1799 Top.mapred_config_fields mapreduce_job_speculative_speculative__cap__running__tasks ftype def
+R1861:1922 Top.mapred_config_fields mapreduce_job_speculative_speculative__cap__total__tasks ftype def
+R1964:2005 Top.mapred_config_fields mapreduce_job_split_metainfo_maxsize ftype def
+R2040:2074 Top.mapred_config_fields mapreduce_job_ubertask_enable ftype def
+R2110:2145 Top.mapred_config_fields mapreduce_job_ubertask_maxmaps ftype def
+R2184:2222 Top.mapred_config_fields mapreduce_job_ubertask_maxreduces ftype def
+R2273:2323 Top.mapred_config_fields mapreduce_jobtracker_expire_trackers_interval ftype def
+R2363:2402 Top.mapred_config_fields mapreduce_jobtracker_handler_count ftype def
+R2444:2485 Top.mapred_config_fields mapreduce_jobtracker_maxtasks_perjob ftype def
+R2528:2570 Top.mapred_config_fields mapreduce_jobtracker_taskcache_levels ftype def
+R2600:2629 Top.mapred_config_fields mapreduce_map_cpu_vcores ftype def
+R2658:2686 Top.mapred_config_fields mapreduce_map_java_opts ftype def
+R2715:2743 Top.mapred_config_fields mapreduce_map_memory_mb ftype def
+R2778:2812 Top.mapred_config_fields mapreduce_map_output_compress ftype def
+R2853:2893 Top.mapred_config_fields mapreduce_map_output_compress_codec ftype def
+R2928:2962 Top.mapred_config_fields mapreduce_map_skip_maxrecords ftype def
+R3006:3049 Top.mapred_config_fields mapreduce_map_skip_proc_count_autoincr ftype def
+R3087:3124 Top.mapred_config_fields mapreduce_map_sort_spill_percent ftype def
+R3155:3185 Top.mapred_config_fields mapreduce_map_speculative ftype def
+R3233:3280 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress ftype def
+R3334:3387 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_codec ftype def
+R3440:3492 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_type ftype def
+R3525:3557 Top.mapred_config_fields mapreduce_reduce_cpu_vcores ftype def
+R3600:3642 Top.mapred_config_fields mapreduce_reduce_input_buffer_percent ftype def
+R3674:3705 Top.mapred_config_fields mapreduce_reduce_java_opts ftype def
+R3752:3798 Top.mapred_config_fields mapreduce_reduce_markreset_buffer_percent ftype def
+R3830:3861 Top.mapred_config_fields mapreduce_reduce_memory_mb ftype def
+R3905:3948 Top.mapred_config_fields mapreduce_reduce_merge_inmem_threshold ftype def
+R3999:4049 Top.mapred_config_fields mapreduce_reduce_shuffle_input_buffer_percent ftype def
+R4100:4150 Top.mapred_config_fields mapreduce_reduce_shuffle_memory_limit_percent ftype def
+R4194:4237 Top.mapred_config_fields mapreduce_reduce_shuffle_merge_percent ftype def
+R4282:4326 Top.mapred_config_fields mapreduce_reduce_shuffle_parallelcopies ftype def
+R4365:4403 Top.mapred_config_fields mapreduce_shuffle_max_connections ftype def
+R4438:4472 Top.mapred_config_fields mapreduce_shuffle_max_threads ftype def
+R4516:4559 Top.mapred_config_fields mapreduce_shuffle_transfer_buffer_size ftype def
+R4604:4648 Top.mapred_config_fields mapreduce_task_combine_progress_records ftype def
+R4683:4717 Top.mapred_config_fields mapreduce_task_io_sort_factor ftype def
+R4748:4778 Top.mapred_config_fields mapreduce_task_io_sort_mb ftype def
+R4821:4863 Top.mapred_config_fields mapreduce_task_merge_progress_records ftype def
+R4896:4928 Top.mapred_config_fields mapreduce_task_profile_maps ftype def
+R4964:4999 Top.mapred_config_fields mapreduce_task_profile_reduces ftype def
+R5039:5078 Top.mapred_config_fields mapreduce_tasktracker_http_threads ftype def
+R5119:5159 Top.mapred_config_fields mapreduce_tasktracker_indexcache_mb ftype def
+R5204:5248 Top.mapred_config_fields mapreduce_tasktracker_map_tasks_maximum ftype def
+R5296:5343 Top.mapred_config_fields mapreduce_tasktracker_reduce_tasks_maximum ftype def
+R5407:5470 Top.mapred_config_fields mapreduce_tasktracker_taskmemorymanager_monitoringinterval ftype def
+R5511:5551 Top.mapred_config_fields yarn_app_mapreduce_am_command__opts ftype def
+R5622:5692 Top.mapred_config_fields yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size ftype def
+R5751:5809 Top.mapred_config_fields yarn_app_mapreduce_am_job_task_listener_thread__count ftype def
+R5857:5904 Top.mapred_config_fields yarn_app_mapreduce_am_resource_cpu__vcores ftype def
+R5943:5981 Top.mapred_config_fields yarn_app_mapreduce_am_resource_mb ftype def
+R6083:6086 Coq.ZArith.BinInt Z gt def
+R6196:6201 Coq.ZArith.BinInt Z of_N def
+R6204:6254 Top.mapred_config_fields mapreduce_input_fileinputformat_split_minsize value def
+R6256:6300 Top.mapred_config <> mapreduce_input_fileinputformat_split_minsize meth
+R6089:6092 Coq.Numbers.BinNums <> Zpos constr
+R6095:6145 Top.mapred_config_fields mapreduce_input_fileinputformat_split_maxsize value def
+R6147:6191 Top.mapred_config <> mapreduce_input_fileinputformat_split_maxsize meth
+R6514:6514 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6589:6599 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6738:6738 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6600:6605 Coq.PArith.BinPos Pos gt def
+R6684:6712 Top.mapred_config_fields mapreduce_map_memory_mb value def
+R6714:6736 Top.mapred_config <> mapreduce_map_memory_mb meth
+R6608:6646 Top.mapred_config_fields yarn_app_mapreduce_am_resource_mb value def
+R6648:6680 Top.mapred_config <> yarn_app_mapreduce_am_resource_mb meth
+R6515:6515 Coq.Init.Logic <> :type_scope:x_'='_x not
+R6581:6584 Coq.Init.Logic <> :type_scope:x_'='_x not
+R6516:6550 Top.mapred_config_fields mapreduce_job_ubertask_enable value def
+R6552:6580 Top.mapred_config <> mapreduce_job_ubertask_enable meth
+R6585:6588 Coq.Init.Datatypes <> true constr
+R6755:6755 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6830:6839 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6840:6845 Coq.PArith.BinPos Pos gt def
+R6924:6955 Top.mapred_config_fields mapreduce_reduce_memory_mb value def
+R6957:6982 Top.mapred_config <> mapreduce_reduce_memory_mb meth
+R6848:6886 Top.mapred_config_fields yarn_app_mapreduce_am_resource_mb value def
+R6888:6920 Top.mapred_config <> yarn_app_mapreduce_am_resource_mb meth
+R6756:6756 Coq.Init.Logic <> :type_scope:x_'='_x not
+R6822:6825 Coq.Init.Logic <> :type_scope:x_'='_x not
+R6757:6791 Top.mapred_config_fields mapreduce_job_ubertask_enable value def
+R6793:6821 Top.mapred_config <> mapreduce_job_ubertask_enable meth
+R6826:6829 Coq.Init.Datatypes <> true constr
+R7000:7000 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7075:7084 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7085:7090 Coq.PArith.BinPos Pos gt def
+R7187:7216 Top.mapred_config_fields mapreduce_map_cpu_vcores value def
+R7218:7241 Top.mapred_config <> mapreduce_map_cpu_vcores meth
+R7093:7140 Top.mapred_config_fields yarn_app_mapreduce_am_resource_cpu__vcores value def
+R7142:7183 Top.mapred_config <> yarn_app_mapreduce_am_resource_cpu__vcores meth
+R7001:7001 Coq.Init.Logic <> :type_scope:x_'='_x not
+R7067:7070 Coq.Init.Logic <> :type_scope:x_'='_x not
+R7002:7036 Top.mapred_config_fields mapreduce_job_ubertask_enable value def
+R7038:7066 Top.mapred_config <> mapreduce_job_ubertask_enable meth
+R7071:7074 Coq.Init.Datatypes <> true constr
+R7259:7259 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7334:7343 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7344:7349 Coq.PArith.BinPos Pos gt def
+R7446:7478 Top.mapred_config_fields mapreduce_reduce_cpu_vcores value def
+R7480:7506 Top.mapred_config <> mapreduce_reduce_cpu_vcores meth
+R7352:7399 Top.mapred_config_fields yarn_app_mapreduce_am_resource_cpu__vcores value def
+R7401:7442 Top.mapred_config <> yarn_app_mapreduce_am_resource_cpu__vcores meth
+R7260:7260 Coq.Init.Logic <> :type_scope:x_'='_x not
+R7326:7329 Coq.Init.Logic <> :type_scope:x_'='_x not
+R7261:7295 Top.mapred_config_fields mapreduce_job_ubertask_enable value def
+R7297:7325 Top.mapred_config <> mapreduce_job_ubertask_enable meth
+R7330:7333 Coq.Init.Datatypes <> true constr

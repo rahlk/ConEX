@@ -1,0 +1,44 @@
+DIGEST 0ec54458fffb3c28bb7f543ff2141fa2
+FTop.hadoop_config
+R15:20 Coq.Strings.String <> <> lib
+R63:73 Top.core_config <> <> lib
+R91:103 Top.mapred_config <> <> lib
+R121:131 Top.hdfs_config <> <> lib
+R149:159 Top.yarn_config <> <> lib
+R177:184 Top.env_desc <> <> lib
+R202:207 Coq.ZArith.ZArith <> <> lib
+R225:229 Coq.Reals.Reals <> <> lib
+constr 423:438 <> mk_hadoop_config
+rec 407:418 <> HadoopConfig
+proj 444:454 <> yarn_config
+proj 470:482 <> mapred_config
+proj 500:510 <> core_config
+proj 526:536 <> hdfs_config
+proj 681:698 <> mr_mem_lt_yarn_mem
+proj 898:917 <> mr_core_lt_yarn_core
+R457:466 Top.yarn_config <> YarnConfig rec
+R485:496 Top.mapred_config <> MapRedConfig rec
+R513:522 Top.core_config <> CoreConfig rec
+R539:548 Top.hdfs_config <> HDFSConfig rec
+R707:707 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R784:793 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R894:894 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R708:711 Coq.Numbers.BinNums <> Zpos constr
+R714:742 Top.mapred_config_fields mapreduce_map_memory_mb value def
+R745:767 Top.mapred_config <> mapreduce_map_memory_mb proj
+R769:781 Top.hadoop_config <> mapred_config meth
+R794:797 Coq.Numbers.BinNums <> Zpos constr
+R800:841 Top.yarn_config_fields yarn_nodemanager_resource_memory__mb value def
+R844:879 Top.yarn_config <> yarn_nodemanager_resource_memory__mb proj
+R881:891 Top.hadoop_config <> yarn_config meth
+R924:924 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R1003:1011 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R1114:1114 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R925:928 Coq.Numbers.BinNums <> Zpos constr
+R931:960 Top.mapred_config_fields mapreduce_map_cpu_vcores value def
+R963:986 Top.mapred_config <> mapreduce_map_cpu_vcores proj
+R988:1000 Top.hadoop_config <> mapred_config meth
+R1012:1015 Coq.Numbers.BinNums <> Zpos constr
+R1018:1060 Top.yarn_config_fields yarn_nodemanager_resource_cpu__vcores value def
+R1063:1099 Top.yarn_config <> yarn_nodemanager_resource_cpu__vcores proj
+R1101:1111 Top.hadoop_config <> yarn_config meth

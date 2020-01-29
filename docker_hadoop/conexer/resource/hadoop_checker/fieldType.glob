@@ -1,0 +1,109 @@
+DIGEST 61a1c03dceb5b5a24d47b7978ded19c1
+FTop.fieldType
+R15:31 Top.hadoop_base_types <> <> lib
+R49:56 Top.env_desc <> <> lib
+R74:90 Coq.ZArith.BinInt <> <> lib
+R108:113 Coq.Strings.String <> <> lib
+R131:135 Coq.Reals.Reals <> <> lib
+ind 465:469 <> RTipe
+constr 479:485 <> rTipe_Z
+constr 492:500 <> rTipe_pos
+constr 507:513 <> rTipe_N
+constr 520:531 <> rTipe_string
+constr 538:547 <> rTipe_bool
+constr 554:567 <> rTipe_JavaOpts
+constr 574:584 <> rTipe_float
+constr 590:605 <> rTipe_option_pos
+R486:486 Top.fieldType <> RTipe ind
+R501:501 Top.fieldType <> RTipe ind
+R514:514 Top.fieldType <> RTipe ind
+R532:532 Top.fieldType <> RTipe ind
+R548:548 Top.fieldType <> RTipe ind
+R568:568 Top.fieldType <> RTipe ind
+R585:585 Top.fieldType <> RTipe ind
+R606:606 Top.fieldType <> RTipe ind
+def 981:990 <> typeOfTipe
+R997:1001 Top.fieldType <> RTipe ind
+R1021:1022 Top.fieldType <> mt var
+R1035:1041 Top.fieldType <> rTipe_Z constr
+R1064:1064 Coq.Numbers.BinNums <> Z ind
+R1103:1111 Top.fieldType <> rTipe_pos constr
+R1130:1137 Coq.Numbers.BinNums <> positive ind
+R1172:1178 Top.fieldType <> rTipe_N constr
+R1201:1201 Coq.Numbers.BinNums <> N ind
+R1249:1260 Top.fieldType <> rTipe_string constr
+R1276:1281 Coq.Strings.String <> string ind
+R1289:1298 Top.fieldType <> rTipe_bool constr
+R1316:1319 Coq.Init.Datatypes <> bool ind
+R1327:1340 Top.fieldType <> rTipe_JavaOpts constr
+R1349:1356 Top.hadoop_base_types <> JavaOpts indrec
+R1364:1374 Top.fieldType <> rTipe_float constr
+R1391:1391 Coq.Reals.Rdefinitions <> R defax
+R1399:1414 Top.fieldType <> rTipe_option_pos constr
+R1420:1425 Coq.Init.Datatypes <> option ind
+R1427:1434 Coq.Numbers.BinNums <> positive ind
+constr 2067:2074 <> mk_field
+rec 2005:2009 <> Field
+proj 2082:2089 <> field_id
+proj 2103:2113 <> field_final
+proj 2125:2135 <> field_value
+proj 2160:2170 <> field_proof
+R2018:2022 Top.fieldType <> RTipe ind
+R2036:2036 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2052:2056 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2037:2046 Top.fieldType <> typeOfTipe def
+R2048:2051 Top.fieldType <> tipe var
+R2092:2097 Coq.Strings.String <> string ind
+R2116:2119 Coq.Init.Datatypes <> bool ind
+R2139:2148 Top.fieldType <> typeOfTipe def
+R2150:2153 Top.fieldType <> tipe var
+R2173:2180 Top.fieldType <> property var
+R2182:2192 Top.fieldType <> field_value meth
+modtype 2708:2723 <> Field_ModuleType
+ax 2736:2740 Field_ModuleType fName
+R2744:2749 Coq.Strings.String <> string ind
+ax 2762:2766 Field_ModuleType rTipe
+R2770:2774 Top.fieldType <> RTipe ind
+ax 2787:2795 Field_ModuleType rProperty
+R2815:2818 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2799:2808 Top.fieldType <> typeOfTipe def
+R2810:2814 Top.fieldType Field_ModuleType rTipe defax
+ax 2835:2839 Field_ModuleType fUnit
+R2843:2848 Coq.Strings.String <> string ind
+ax 2861:2867 Field_ModuleType fInterp
+R2871:2876 Coq.Strings.String <> string ind
+ax 2889:2895 Field_ModuleType fAdvice
+R2899:2904 Coq.Strings.String <> string ind
+R2911:2926 Top.fieldType Field_ModuleType <> modtype
+R3555:3570 Top.fieldType Field_ModuleType <> mod
+mod 3521:3538 <> FieldModuleFunctor
+def 3605:3609 FieldModuleFunctor mtype
+R3614:3623 Top.fieldType <> typeOfTipe def
+R3625:3629 Top.fieldType FieldModule rTipe defax
+def 3643:3644 FieldModuleFunctor mk
+R3656:3659 Coq.Init.Datatypes <> bool ind
+R3671:3680 Top.fieldType <> typeOfTipe def
+R3682:3686 Top.fieldType FieldModule rTipe defax
+R3696:3704 Top.fieldType FieldModule rProperty defax
+R3706:3710 Top.fieldType <> value var
+R3719:3726 Top.fieldType <> mk_field constr
+R3764:3765 Top.fieldType <> pf var
+R3758:3762 Top.fieldType <> value var
+R3750:3756 Top.fieldType <> isFinal var
+R3744:3748 Top.fieldType FieldModule fName defax
+R3734:3742 Top.fieldType FieldModule rProperty defax
+R3728:3732 Top.fieldType FieldModule rTipe defax
+def 3779:3783 FieldModuleFunctor ftype
+R3788:3792 Top.fieldType <> Field indrec
+R3800:3808 Top.fieldType FieldModule rProperty defax
+R3794:3798 Top.fieldType FieldModule rTipe defax
+def 3822:3825 FieldModuleFunctor name
+R3830:3834 Top.fieldType FieldModule fName defax
+def 3848:3852 FieldModuleFunctor value
+R3858:3862 Top.fieldType FieldModuleFunctor ftype def
+R3866:3870 Top.fieldType FieldModuleFunctor mtype def
+R3875:3885 Top.fieldType <> field_value proj
+R3903:3903 Top.fieldType <> f var
+R3893:3901 Top.fieldType FieldModule rProperty defax
+R3887:3891 Top.fieldType FieldModule rTipe defax
+R3910:3927 Top.fieldType FieldModuleFunctor <> mod

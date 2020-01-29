@@ -1,0 +1,12 @@
+Require Export Coq.ZArith.BinInt.
+
+Inductive JavaOpts := mk_java_opts {
+   starting_heap_size: positive
+ ; maximum_heap_size: positive
+}.
+
+Definition unlimited_pos (p:positive) : option positive := 
+match p with
+  | S p => Some p
+  | O => None
+end.

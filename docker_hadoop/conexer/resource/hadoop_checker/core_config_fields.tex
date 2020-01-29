@@ -1,0 +1,155 @@
+\documentclass[12pt]{report}
+\usepackage[]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{coqdoc}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file has been automatically generated with the command
+%% coqdoc --latex core_config_fields.v 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coqlibrary{core config fields}{Library }{core\_config\_fields}
+
+\begin{coqdoccode}
+\coqdocnoindent
+\coqdockw{Require} \coqdockw{Export} \coqdocvar{fieldType}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Require} \coqdockw{Import} \coqdocvar{env\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Require} \coqdockw{Import} \coqdocvar{Coq.ZArith.Zdiv}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Open} \coqdockw{Scope} \coqdocvar{string\_scope}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Open} \coqdockw{Scope} \coqdocvar{Z\_scope}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Open} \coqdockw{Scope} \coqdocvar{positive\_scope}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_file\_buffer\_size\_desc} <: \coqdocvar{Field\_ModuleType}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fName} := "io.file.buffer.size".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rTipe} := \coqdocvar{rTipe\_pos}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rProperty} := \coqdockw{fun} \coqdocvar{value}: \coqdocvar{positive} \ensuremath{\Rightarrow} ((\coqdocvar{Zpos} \coqdocvar{value}) \coqdocvar{mod} (\coqdocvar{Zpos} (\coqdocvar{myEnv}.(\coqdocvar{env\_hw\_page\_size})))) = 0\%\coqdocvar{Z}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fUnit} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fInterp} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fAdvice} := "".\coqdoceol
+\coqdocnoindent
+\coqdockw{End} \coqdocvar{io\_file\_buffer\_size\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_file\_buffer\_size} := \coqdocvar{FieldModuleFunctor} \coqdocvar{io\_file\_buffer\_size\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Export} \coqdocvar{io\_file\_buffer\_size}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_map\_index\_interval\_desc} <: \coqdocvar{Field\_ModuleType}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fName} := "io.map.index.interval".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rTipe} := \coqdocvar{rTipe\_pos}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rProperty} := \coqdockw{fun} \coqdocvar{value}: \coqdocvar{positive} \ensuremath{\Rightarrow} \coqdocvar{True}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fUnit} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fInterp} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fAdvice} := "".\coqdoceol
+\coqdocnoindent
+\coqdockw{End} \coqdocvar{io\_map\_index\_interval\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_map\_index\_interval} := \coqdocvar{FieldModuleFunctor} \coqdocvar{io\_map\_index\_interval\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Export} \coqdocvar{io\_map\_index\_interval}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_map\_index\_skip\_desc} <: \coqdocvar{Field\_ModuleType}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fName} := "io.map.index.skip".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rTipe} := \coqdocvar{rTipe\_N}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rProperty} := \coqdockw{fun} \coqdocvar{value}: \coqdocvar{N} \ensuremath{\Rightarrow} \coqdocvar{True}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fUnit} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fInterp} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fAdvice} := "".\coqdoceol
+\coqdocnoindent
+\coqdockw{End} \coqdocvar{io\_map\_index\_skip\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_map\_index\_skip} := \coqdocvar{FieldModuleFunctor} \coqdocvar{io\_map\_index\_skip\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Export} \coqdocvar{io\_map\_index\_skip}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_seqfile\_compress\_blocksize\_desc} <: \coqdocvar{Field\_ModuleType}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fName} := "io.seqfile.compress.blocksize".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rTipe} := \coqdocvar{rTipe\_pos}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rProperty} := \coqdockw{fun} \coqdocvar{value}: \coqdocvar{positive} \ensuremath{\Rightarrow} \coqdocvar{True}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fUnit} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fInterp} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fAdvice} := "".\coqdoceol
+\coqdocnoindent
+\coqdockw{End} \coqdocvar{io\_seqfile\_compress\_blocksize\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_seqfile\_compress\_blocksize} := \coqdocvar{FieldModuleFunctor} \coqdocvar{io\_seqfile\_compress\_blocksize\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Export} \coqdocvar{io\_seqfile\_compress\_blocksize}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_seqfile\_sorter\_recordlimit\_desc} <: \coqdocvar{Field\_ModuleType}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fName} := "io.seqfile.sorter.recordlimit".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rTipe} := \coqdocvar{rTipe\_pos}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rProperty} := \coqdockw{fun} \coqdocvar{value}: \coqdocvar{positive} \ensuremath{\Rightarrow} \coqdocvar{True}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fUnit} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fInterp} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fAdvice} := "".\coqdoceol
+\coqdocnoindent
+\coqdockw{End} \coqdocvar{io\_seqfile\_sorter\_recordlimit\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{io\_seqfile\_sorter\_recordlimit} := \coqdocvar{FieldModuleFunctor} \coqdocvar{io\_seqfile\_sorter\_recordlimit\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Export} \coqdocvar{io\_seqfile\_sorter\_recordlimit}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{ipc\_maximum\_data\_length\_desc} <: \coqdocvar{Field\_ModuleType}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fName} := "ipc.maximum.data.length".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rTipe} := \coqdocvar{rTipe\_pos}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{rProperty} := \coqdockw{fun} \coqdocvar{value}: \coqdocvar{positive} \ensuremath{\Rightarrow} \coqdocvar{True}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fUnit} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fInterp} := "".\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Definition} \coqdocvar{fAdvice} := "".\coqdoceol
+\coqdocnoindent
+\coqdockw{End} \coqdocvar{ipc\_maximum\_data\_length\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Module} \coqdocvar{ipc\_maximum\_data\_length} := \coqdocvar{FieldModuleFunctor} \coqdocvar{ipc\_maximum\_data\_length\_desc}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Export} \coqdocvar{ipc\_maximum\_data\_length}.\coqdoceol
+\end{coqdoccode}
+\end{document}

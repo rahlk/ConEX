@@ -1,0 +1,9 @@
+DIGEST 6001fad19fe1e321a2a0717277e189de
+FTop.hadoop_base_types
+R15:31 Coq.ZArith.BinInt <> <> lib
+constr 57:68 <> mk_java_opts
+rec 45:52 <> JavaOpts
+proj 75:92 <> starting_heap_size
+proj 107:123 <> maximum_heap_size
+R95:102 Coq.Numbers.BinNums <> positive ind
+R126:133 Coq.Numbers.BinNums <> positive ind

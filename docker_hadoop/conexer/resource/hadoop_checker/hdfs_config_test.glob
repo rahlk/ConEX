@@ -1,0 +1,20 @@
+DIGEST 37fe847c8969e82057ae0755c528fba0
+FTop.hdfs_config_test
+R15:25 Top.hdfs_config <> <> lib
+R43:50 Top.env_desc <> <> lib
+R68:72 Coq.omega.Omega <> <> lib
+def 88:100 <> a_hdfs_config
+R103:112 Top.hdfs_config <> HDFSConfig rec
+R135:148 Top.hdfs_config <> mk_hdfs_config constr
+R222:239 Top.hdfs_config_fields dfs_replication mk def
+R245:249 Coq.Init.Datatypes <> false constr
+R155:183 Top.hdfs_config_fields dfs_namenode_handler_count mk def
+R196:200 Coq.Init.Datatypes <> false constr
+R279:279 Coq.Init.Logic <> I constr
+R135:148 Top.hdfs_config <> mk_hdfs_config constr
+R222:239 Top.hdfs_config_fields dfs_replication mk def
+R245:249 Coq.Init.Datatypes <> false constr
+R155:183 Top.hdfs_config_fields dfs_namenode_handler_count mk def
+R196:200 Coq.Init.Datatypes <> false constr
+R279:279 Coq.Init.Logic <> I constr
+R279:279 Coq.Init.Logic <> I constr

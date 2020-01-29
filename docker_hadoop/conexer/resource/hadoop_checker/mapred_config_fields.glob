@@ -1,0 +1,1105 @@
+DIGEST c226253dfab1ce2e1873cf456631d87f
+FTop.mapred_config_fields
+R15:23 Top.fieldType <> <> lib
+R41:48 Top.env_desc <> <> lib
+R66:80 Coq.ZArith.Zdiv <> <> lib
+R150:154 Coq.Reals.Reals <> <> lib
+R235:238 Coq.Lists.List <> <> lib
+R303:318 Top.fieldType Field_ModuleType <> mod
+mod 272:298 <> mapred_child_java_opts_desc
+def 334:338 mapred_child_java_opts_desc fName
+def 382:386 mapred_child_java_opts_desc rTipe
+R391:404 Top.fieldType <> rTipe_JavaOpts constr
+def 420:428 mapred_child_java_opts_desc rProperty
+R444:451 Top.hadoop_base_types <> JavaOpts indrec
+R456:459 Coq.Init.Logic <> True ind
+def 475:479 mapred_child_java_opts_desc fUnit
+def 501:507 mapred_child_java_opts_desc fInterp
+def 529:535 mapred_child_java_opts_desc fAdvice
+R548:574 Top.mapred_config_fields mapred_child_java_opts_desc <> mod
+R610:627 Top.fieldType FieldModuleFunctor <> modtype
+R629:655 Top.mapred_config_fields mapred_child_java_opts_desc <> modtype
+mod 584:605 <> mapred_child_java_opts
+R741:756 Top.fieldType Field_ModuleType <> mod
+mod 698:736 <> mapred_map_output_compression_type_desc
+def 772:776 mapred_map_output_compression_type_desc fName
+def 832:836 mapred_map_output_compression_type_desc rTipe
+R841:852 Top.fieldType <> rTipe_string constr
+def 1018:1026 mapred_map_output_compression_type_desc rProperty
+R1042:1047 Coq.Strings.String <> string ind
+R1052:1053 Coq.Lists.List <> In def
+R1068:1069 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R1078:1079 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R1087:1088 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R1089:1091 Coq.Lists.List <> nil syndef
+R1055:1059 Top.mapred_config_fields <> value var
+def 1108:1112 mapred_map_output_compression_type_desc fUnit
+def 1134:1140 mapred_map_output_compression_type_desc fInterp
+def 1162:1168 mapred_map_output_compression_type_desc fAdvice
+R1181:1219 Top.mapred_config_fields mapred_map_output_compression_type_desc <> mod
+R1267:1284 Top.fieldType FieldModuleFunctor <> modtype
+R1286:1324 Top.mapred_config_fields mapred_map_output_compression_type_desc <> modtype
+mod 1229:1262 <> mapred_map_output_compression_type
+R1413:1428 Top.fieldType Field_ModuleType <> mod
+mod 1379:1408 <> mapreduce_ifile_readahead_desc
+def 1444:1448 mapreduce_ifile_readahead_desc fName
+def 1495:1499 mapreduce_ifile_readahead_desc rTipe
+R1504:1513 Top.fieldType <> rTipe_bool constr
+def 1529:1537 mapreduce_ifile_readahead_desc rProperty
+R1553:1556 Coq.Init.Datatypes <> bool ind
+R1561:1564 Coq.Init.Logic <> True ind
+def 1580:1584 mapreduce_ifile_readahead_desc fUnit
+def 1606:1612 mapreduce_ifile_readahead_desc fInterp
+def 1634:1640 mapreduce_ifile_readahead_desc fAdvice
+R1653:1682 Top.mapred_config_fields mapreduce_ifile_readahead_desc <> mod
+R1721:1738 Top.fieldType FieldModuleFunctor <> modtype
+R1740:1769 Top.mapred_config_fields mapreduce_ifile_readahead_desc <> modtype
+mod 1692:1716 <> mapreduce_ifile_readahead
+R1855:1870 Top.fieldType Field_ModuleType <> mod
+mod 1815:1850 <> mapreduce_ifile_readahead_bytes_desc
+def 1886:1890 mapreduce_ifile_readahead_bytes_desc fName
+def 1943:1947 mapreduce_ifile_readahead_bytes_desc rTipe
+R1952:1960 Top.fieldType <> rTipe_pos constr
+def 1976:1984 mapreduce_ifile_readahead_bytes_desc rProperty
+R2000:2007 Coq.Numbers.BinNums <> positive ind
+R2012:2015 Coq.Init.Logic <> True ind
+def 2031:2035 mapreduce_ifile_readahead_bytes_desc fUnit
+def 2057:2063 mapreduce_ifile_readahead_bytes_desc fInterp
+def 2085:2091 mapreduce_ifile_readahead_bytes_desc fAdvice
+R2104:2139 Top.mapred_config_fields mapreduce_ifile_readahead_bytes_desc <> mod
+R2184:2201 Top.fieldType FieldModuleFunctor <> modtype
+R2203:2238 Top.mapred_config_fields mapreduce_ifile_readahead_bytes_desc <> modtype
+mod 2149:2179 <> mapreduce_ifile_readahead_bytes
+R2344:2359 Top.fieldType Field_ModuleType <> mod
+mod 2290:2339 <> mapreduce_input_fileinputformat_split_maxsize_desc
+def 2375:2379 mapreduce_input_fileinputformat_split_maxsize_desc fName
+def 2446:2450 mapreduce_input_fileinputformat_split_maxsize_desc rTipe
+R2455:2463 Top.fieldType <> rTipe_pos constr
+def 2479:2487 mapreduce_input_fileinputformat_split_maxsize_desc rProperty
+R2503:2510 Coq.Numbers.BinNums <> positive ind
+R2515:2518 Coq.Init.Logic <> True ind
+def 2534:2538 mapreduce_input_fileinputformat_split_maxsize_desc fUnit
+def 2560:2566 mapreduce_input_fileinputformat_split_maxsize_desc fInterp
+def 2588:2594 mapreduce_input_fileinputformat_split_maxsize_desc fAdvice
+R2607:2656 Top.mapred_config_fields mapreduce_input_fileinputformat_split_maxsize_desc <> mod
+R2715:2732 Top.fieldType FieldModuleFunctor <> modtype
+R2734:2783 Top.mapred_config_fields mapreduce_input_fileinputformat_split_maxsize_desc <> modtype
+mod 2666:2710 <> mapreduce_input_fileinputformat_split_maxsize
+R2903:2918 Top.fieldType Field_ModuleType <> mod
+mod 2849:2898 <> mapreduce_input_fileinputformat_split_minsize_desc
+def 2934:2938 mapreduce_input_fileinputformat_split_minsize_desc fName
+def 3005:3009 mapreduce_input_fileinputformat_split_minsize_desc rTipe
+R3014:3020 Top.fieldType <> rTipe_N constr
+def 3036:3044 mapreduce_input_fileinputformat_split_minsize_desc rProperty
+R3060:3060 Coq.Numbers.BinNums <> N ind
+R3065:3068 Coq.Init.Logic <> True ind
+def 3084:3088 mapreduce_input_fileinputformat_split_minsize_desc fUnit
+def 3110:3116 mapreduce_input_fileinputformat_split_minsize_desc fInterp
+def 3138:3144 mapreduce_input_fileinputformat_split_minsize_desc fAdvice
+R3157:3206 Top.mapred_config_fields mapreduce_input_fileinputformat_split_minsize_desc <> mod
+R3265:3282 Top.fieldType FieldModuleFunctor <> modtype
+R3284:3333 Top.mapred_config_fields mapreduce_input_fileinputformat_split_minsize_desc <> modtype
+mod 3216:3260 <> mapreduce_input_fileinputformat_split_minsize
+R3451:3466 Top.fieldType Field_ModuleType <> mod
+mod 3399:3446 <> mapreduce_input_lineinputformat_linespermap_desc
+def 3482:3486 mapreduce_input_lineinputformat_linespermap_desc fName
+def 3551:3555 mapreduce_input_lineinputformat_linespermap_desc rTipe
+R3560:3568 Top.fieldType <> rTipe_pos constr
+def 3584:3592 mapreduce_input_lineinputformat_linespermap_desc rProperty
+R3608:3615 Coq.Numbers.BinNums <> positive ind
+R3620:3623 Coq.Init.Logic <> True ind
+def 3639:3643 mapreduce_input_lineinputformat_linespermap_desc fUnit
+def 3665:3671 mapreduce_input_lineinputformat_linespermap_desc fInterp
+def 3693:3699 mapreduce_input_lineinputformat_linespermap_desc fAdvice
+R3712:3759 Top.mapred_config_fields mapreduce_input_lineinputformat_linespermap_desc <> mod
+R3816:3833 Top.fieldType FieldModuleFunctor <> modtype
+R3835:3882 Top.mapred_config_fields mapreduce_input_lineinputformat_linespermap_desc <> modtype
+mod 3769:3811 <> mapreduce_input_lineinputformat_linespermap
+R3981:3996 Top.fieldType Field_ModuleType <> mod
+mod 3946:3976 <> mapreduce_job_counters_max_desc
+def 4012:4016 mapreduce_job_counters_max_desc fName
+def 4064:4068 mapreduce_job_counters_max_desc rTipe
+R4073:4081 Top.fieldType <> rTipe_pos constr
+def 4097:4105 mapreduce_job_counters_max_desc rProperty
+R4121:4128 Coq.Numbers.BinNums <> positive ind
+R4133:4136 Coq.Init.Logic <> True ind
+def 4152:4156 mapreduce_job_counters_max_desc fUnit
+def 4178:4184 mapreduce_job_counters_max_desc fInterp
+def 4206:4212 mapreduce_job_counters_max_desc fAdvice
+R4225:4255 Top.mapred_config_fields mapreduce_job_counters_max_desc <> mod
+R4295:4312 Top.fieldType FieldModuleFunctor <> modtype
+R4314:4344 Top.mapred_config_fields mapreduce_job_counters_max_desc <> modtype
+mod 4265:4290 <> mapreduce_job_counters_max
+R4426:4441 Top.fieldType Field_ModuleType <> mod
+mod 4391:4421 <> mapreduce_job_jvm_numtasks_desc
+def 4457:4461 mapreduce_job_jvm_numtasks_desc fName
+def 4509:4513 mapreduce_job_jvm_numtasks_desc rTipe
+R4518:4533 Top.fieldType <> rTipe_option_pos constr
+def 4699:4707 mapreduce_job_jvm_numtasks_desc rProperty
+R4724:4729 Coq.Init.Datatypes <> option ind
+R4731:4738 Coq.Numbers.BinNums <> positive ind
+R4744:4747 Coq.Init.Logic <> True ind
+def 4847:4851 mapreduce_job_jvm_numtasks_desc fUnit
+def 4873:4879 mapreduce_job_jvm_numtasks_desc fInterp
+def 4901:4907 mapreduce_job_jvm_numtasks_desc fAdvice
+R4920:4950 Top.mapred_config_fields mapreduce_job_jvm_numtasks_desc <> mod
+R4990:5007 Top.fieldType FieldModuleFunctor <> modtype
+R5009:5039 Top.mapred_config_fields mapreduce_job_jvm_numtasks_desc <> modtype
+mod 4960:4985 <> mapreduce_job_jvm_numtasks
+R5128:5143 Top.fieldType Field_ModuleType <> mod
+mod 5086:5123 <> mapreduce_job_max_split_locations_desc
+def 5159:5163 mapreduce_job_max_split_locations_desc fName
+def 5218:5222 mapreduce_job_max_split_locations_desc rTipe
+R5227:5235 Top.fieldType <> rTipe_pos constr
+def 5251:5259 mapreduce_job_max_split_locations_desc rProperty
+R5275:5282 Coq.Numbers.BinNums <> positive ind
+R5287:5290 Coq.Init.Logic <> True ind
+def 5306:5310 mapreduce_job_max_split_locations_desc fUnit
+def 5332:5338 mapreduce_job_max_split_locations_desc fInterp
+def 5360:5366 mapreduce_job_max_split_locations_desc fAdvice
+R5379:5416 Top.mapred_config_fields mapreduce_job_max_split_locations_desc <> mod
+R5463:5480 Top.fieldType FieldModuleFunctor <> modtype
+R5482:5519 Top.mapred_config_fields mapreduce_job_max_split_locations_desc <> modtype
+mod 5426:5458 <> mapreduce_job_max_split_locations
+R5626:5641 Top.fieldType Field_ModuleType <> mod
+mod 5573:5621 <> mapreduce_job_reduce_slowstart_completedmaps_desc
+def 5657:5661 mapreduce_job_reduce_slowstart_completedmaps_desc fName
+def 5727:5731 mapreduce_job_reduce_slowstart_completedmaps_desc rTipe
+R5736:5746 Top.fieldType <> rTipe_float constr
+def 5762:5770 mapreduce_job_reduce_slowstart_completedmaps_desc rProperty
+R5786:5786 Coq.Reals.Rdefinitions <> R defax
+R5791:5794 Coq.Init.Logic <> True ind
+def 5810:5814 mapreduce_job_reduce_slowstart_completedmaps_desc fUnit
+def 5836:5842 mapreduce_job_reduce_slowstart_completedmaps_desc fInterp
+def 5864:5870 mapreduce_job_reduce_slowstart_completedmaps_desc fAdvice
+R5883:5931 Top.mapred_config_fields mapreduce_job_reduce_slowstart_completedmaps_desc <> mod
+R5989:6006 Top.fieldType FieldModuleFunctor <> modtype
+R6008:6056 Top.mapred_config_fields mapreduce_job_reduce_slowstart_completedmaps_desc <> modtype
+mod 5941:5984 <> mapreduce_job_reduce_slowstart_completedmaps
+R6161:6176 Top.fieldType Field_ModuleType <> mod
+mod 6121:6156 <> mapreduce_job_running_map_limit_desc
+def 6192:6196 mapreduce_job_running_map_limit_desc fName
+def 6249:6253 mapreduce_job_running_map_limit_desc rTipe
+R6258:6273 Top.fieldType <> rTipe_option_pos constr
+def 6289:6297 mapreduce_job_running_map_limit_desc rProperty
+R6314:6319 Coq.Init.Datatypes <> option ind
+R6321:6328 Coq.Numbers.BinNums <> positive ind
+R6334:6337 Coq.Init.Logic <> True ind
+def 6353:6357 mapreduce_job_running_map_limit_desc fUnit
+def 6379:6385 mapreduce_job_running_map_limit_desc fInterp
+def 6407:6413 mapreduce_job_running_map_limit_desc fAdvice
+R6426:6461 Top.mapred_config_fields mapreduce_job_running_map_limit_desc <> mod
+R6506:6523 Top.fieldType FieldModuleFunctor <> modtype
+R6525:6560 Top.mapred_config_fields mapreduce_job_running_map_limit_desc <> modtype
+mod 6471:6501 <> mapreduce_job_running_map_limit
+R6655:6670 Top.fieldType Field_ModuleType <> mod
+mod 6612:6650 <> mapreduce_job_running_reduce_limit_desc
+def 6686:6690 mapreduce_job_running_reduce_limit_desc fName
+def 6746:6750 mapreduce_job_running_reduce_limit_desc rTipe
+R6755:6770 Top.fieldType <> rTipe_option_pos constr
+def 6786:6794 mapreduce_job_running_reduce_limit_desc rProperty
+R6811:6816 Coq.Init.Datatypes <> option ind
+R6818:6825 Coq.Numbers.BinNums <> positive ind
+R6831:6834 Coq.Init.Logic <> True ind
+def 6850:6854 mapreduce_job_running_reduce_limit_desc fUnit
+def 6876:6882 mapreduce_job_running_reduce_limit_desc fInterp
+def 6904:6910 mapreduce_job_running_reduce_limit_desc fAdvice
+R6923:6961 Top.mapred_config_fields mapreduce_job_running_reduce_limit_desc <> mod
+R7009:7026 Top.fieldType FieldModuleFunctor <> modtype
+R7028:7066 Top.mapred_config_fields mapreduce_job_running_reduce_limit_desc <> modtype
+mod 6971:7004 <> mapreduce_job_running_reduce_limit
+R7179:7194 Top.fieldType Field_ModuleType <> mod
+mod 7121:7174 <> mapreduce_job_speculative_minimum__allowed__tasks_desc
+def 7210:7214 mapreduce_job_speculative_minimum__allowed__tasks_desc fName
+def 7283:7287 mapreduce_job_speculative_minimum__allowed__tasks_desc rTipe
+R7292:7300 Top.fieldType <> rTipe_pos constr
+def 7316:7324 mapreduce_job_speculative_minimum__allowed__tasks_desc rProperty
+R7340:7347 Coq.Numbers.BinNums <> positive ind
+R7352:7355 Coq.Init.Logic <> True ind
+def 7371:7375 mapreduce_job_speculative_minimum__allowed__tasks_desc fUnit
+def 7397:7403 mapreduce_job_speculative_minimum__allowed__tasks_desc fInterp
+def 7425:7431 mapreduce_job_speculative_minimum__allowed__tasks_desc fAdvice
+R7444:7497 Top.mapred_config_fields mapreduce_job_speculative_minimum__allowed__tasks_desc <> mod
+R7560:7577 Top.fieldType FieldModuleFunctor <> modtype
+R7579:7632 Top.mapred_config_fields mapreduce_job_speculative_minimum__allowed__tasks_desc <> modtype
+mod 7507:7555 <> mapreduce_job_speculative_minimum__allowed__tasks
+R7764:7779 Top.fieldType Field_ModuleType <> mod
+mod 7702:7759 <> mapreduce_job_speculative_retry__after__no__speculate_desc
+def 7795:7799 mapreduce_job_speculative_retry__after__no__speculate_desc fName
+def 7871:7875 mapreduce_job_speculative_retry__after__no__speculate_desc rTipe
+R7880:7888 Top.fieldType <> rTipe_pos constr
+def 7904:7912 mapreduce_job_speculative_retry__after__no__speculate_desc rProperty
+R7928:7935 Coq.Numbers.BinNums <> positive ind
+R7940:7943 Coq.Init.Logic <> True ind
+def 7959:7963 mapreduce_job_speculative_retry__after__no__speculate_desc fUnit
+def 7985:7991 mapreduce_job_speculative_retry__after__no__speculate_desc fInterp
+def 8013:8019 mapreduce_job_speculative_retry__after__no__speculate_desc fAdvice
+R8032:8089 Top.mapred_config_fields mapreduce_job_speculative_retry__after__no__speculate_desc <> mod
+R8156:8173 Top.fieldType FieldModuleFunctor <> modtype
+R8175:8232 Top.mapred_config_fields mapreduce_job_speculative_retry__after__no__speculate_desc <> modtype
+mod 8099:8151 <> mapreduce_job_speculative_retry__after__no__speculate
+R8364:8379 Top.fieldType Field_ModuleType <> mod
+mod 8306:8359 <> mapreduce_job_speculative_retry__after__speculate_desc
+def 8395:8399 mapreduce_job_speculative_retry__after__speculate_desc fName
+def 8468:8472 mapreduce_job_speculative_retry__after__speculate_desc rTipe
+R8477:8485 Top.fieldType <> rTipe_pos constr
+def 8501:8509 mapreduce_job_speculative_retry__after__speculate_desc rProperty
+R8525:8532 Coq.Numbers.BinNums <> positive ind
+R8537:8540 Coq.Init.Logic <> True ind
+def 8556:8560 mapreduce_job_speculative_retry__after__speculate_desc fUnit
+def 8582:8588 mapreduce_job_speculative_retry__after__speculate_desc fInterp
+def 8610:8616 mapreduce_job_speculative_retry__after__speculate_desc fAdvice
+R8629:8682 Top.mapred_config_fields mapreduce_job_speculative_retry__after__speculate_desc <> mod
+R8745:8762 Top.fieldType FieldModuleFunctor <> modtype
+R8764:8817 Top.mapred_config_fields mapreduce_job_speculative_retry__after__speculate_desc <> modtype
+mod 8692:8740 <> mapreduce_job_speculative_retry__after__speculate
+R8954:8969 Top.fieldType Field_ModuleType <> mod
+mod 8887:8949 <> mapreduce_job_speculative_speculative__cap__running__tasks_desc
+def 8985:8989 mapreduce_job_speculative_speculative__cap__running__tasks_desc fName
+def 9066:9070 mapreduce_job_speculative_speculative__cap__running__tasks_desc rTipe
+R9075:9085 Top.fieldType <> rTipe_float constr
+def 9101:9109 mapreduce_job_speculative_speculative__cap__running__tasks_desc rProperty
+R9125:9125 Coq.Reals.Rdefinitions <> R defax
+R9130:9133 Coq.Init.Logic <> True ind
+def 9149:9153 mapreduce_job_speculative_speculative__cap__running__tasks_desc fUnit
+def 9175:9181 mapreduce_job_speculative_speculative__cap__running__tasks_desc fInterp
+def 9203:9209 mapreduce_job_speculative_speculative__cap__running__tasks_desc fAdvice
+R9222:9284 Top.mapred_config_fields mapreduce_job_speculative_speculative__cap__running__tasks_desc <> mod
+R9356:9373 Top.fieldType FieldModuleFunctor <> modtype
+R9375:9437 Top.mapred_config_fields mapreduce_job_speculative_speculative__cap__running__tasks_desc <> modtype
+mod 9294:9351 <> mapreduce_job_speculative_speculative__cap__running__tasks
+R9581:9596 Top.fieldType Field_ModuleType <> mod
+mod 9516:9576 <> mapreduce_job_speculative_speculative__cap__total__tasks_desc
+def 9612:9616 mapreduce_job_speculative_speculative__cap__total__tasks_desc fName
+def 9691:9695 mapreduce_job_speculative_speculative__cap__total__tasks_desc rTipe
+R9700:9710 Top.fieldType <> rTipe_float constr
+def 9726:9734 mapreduce_job_speculative_speculative__cap__total__tasks_desc rProperty
+R9750:9750 Coq.Reals.Rdefinitions <> R defax
+R9755:9758 Coq.Init.Logic <> True ind
+def 9774:9778 mapreduce_job_speculative_speculative__cap__total__tasks_desc fUnit
+def 9800:9806 mapreduce_job_speculative_speculative__cap__total__tasks_desc fInterp
+def 9828:9834 mapreduce_job_speculative_speculative__cap__total__tasks_desc fAdvice
+R9847:9907 Top.mapred_config_fields mapreduce_job_speculative_speculative__cap__total__tasks_desc <> mod
+R9977:9994 Top.fieldType FieldModuleFunctor <> modtype
+R9996:10056 Top.mapred_config_fields mapreduce_job_speculative_speculative__cap__total__tasks_desc <> modtype
+mod 9917:9972 <> mapreduce_job_speculative_speculative__cap__total__tasks
+R10178:10193 Top.fieldType Field_ModuleType <> mod
+mod 10133:10173 <> mapreduce_job_split_metainfo_maxsize_desc
+def 10209:10213 mapreduce_job_split_metainfo_maxsize_desc fName
+def 10532:10536 mapreduce_job_split_metainfo_maxsize_desc rTipe
+R10541:10556 Top.fieldType <> rTipe_option_pos constr
+def 10572:10580 mapreduce_job_split_metainfo_maxsize_desc rProperty
+R10597:10602 Coq.Init.Datatypes <> option ind
+R10604:10611 Coq.Numbers.BinNums <> positive ind
+R10617:10620 Coq.Init.Logic <> True ind
+def 10636:10640 mapreduce_job_split_metainfo_maxsize_desc fUnit
+def 10662:10668 mapreduce_job_split_metainfo_maxsize_desc fInterp
+def 10690:10696 mapreduce_job_split_metainfo_maxsize_desc fAdvice
+R10709:10749 Top.mapred_config_fields mapreduce_job_split_metainfo_maxsize_desc <> mod
+R10799:10816 Top.fieldType FieldModuleFunctor <> modtype
+R10818:10858 Top.mapred_config_fields mapreduce_job_split_metainfo_maxsize_desc <> modtype
+mod 10759:10794 <> mapreduce_job_split_metainfo_maxsize
+R10953:10968 Top.fieldType Field_ModuleType <> mod
+mod 10915:10948 <> mapreduce_job_ubertask_enable_desc
+def 10984:10988 mapreduce_job_ubertask_enable_desc fName
+def 11039:11043 mapreduce_job_ubertask_enable_desc rTipe
+R11048:11057 Top.fieldType <> rTipe_bool constr
+def 11073:11081 mapreduce_job_ubertask_enable_desc rProperty
+R11097:11100 Coq.Init.Datatypes <> bool ind
+R11105:11108 Coq.Init.Logic <> True ind
+def 11124:11128 mapreduce_job_ubertask_enable_desc fUnit
+def 11150:11156 mapreduce_job_ubertask_enable_desc fInterp
+def 11178:11184 mapreduce_job_ubertask_enable_desc fAdvice
+R11197:11230 Top.mapred_config_fields mapreduce_job_ubertask_enable_desc <> mod
+R11273:11290 Top.fieldType FieldModuleFunctor <> modtype
+R11292:11325 Top.mapred_config_fields mapreduce_job_ubertask_enable_desc <> modtype
+mod 11240:11268 <> mapreduce_job_ubertask_enable
+R11414:11429 Top.fieldType Field_ModuleType <> mod
+mod 11375:11409 <> mapreduce_job_ubertask_maxmaps_desc
+def 11445:11449 mapreduce_job_ubertask_maxmaps_desc fName
+def 11501:11505 mapreduce_job_ubertask_maxmaps_desc rTipe
+R11510:11518 Top.fieldType <> rTipe_pos constr
+def 11534:11542 mapreduce_job_ubertask_maxmaps_desc rProperty
+R11558:11565 Coq.Numbers.BinNums <> positive ind
+R11570:11573 Coq.Init.Logic <> True ind
+def 11589:11593 mapreduce_job_ubertask_maxmaps_desc fUnit
+def 11615:11621 mapreduce_job_ubertask_maxmaps_desc fInterp
+def 11643:11649 mapreduce_job_ubertask_maxmaps_desc fAdvice
+R11662:11696 Top.mapred_config_fields mapreduce_job_ubertask_maxmaps_desc <> mod
+R11740:11757 Top.fieldType FieldModuleFunctor <> modtype
+R11759:11793 Top.mapred_config_fields mapreduce_job_ubertask_maxmaps_desc <> modtype
+mod 11706:11735 <> mapreduce_job_ubertask_maxmaps
+R11886:11901 Top.fieldType Field_ModuleType <> mod
+mod 11844:11881 <> mapreduce_job_ubertask_maxreduces_desc
+def 11917:11921 mapreduce_job_ubertask_maxreduces_desc fName
+def 11976:11980 mapreduce_job_ubertask_maxreduces_desc rTipe
+R11985:12000 Top.fieldType <> rTipe_option_pos constr
+def 12016:12024 mapreduce_job_ubertask_maxreduces_desc rProperty
+R12041:12046 Coq.Init.Datatypes <> option ind
+R12048:12055 Coq.Numbers.BinNums <> positive ind
+R12061:12064 Coq.Init.Logic <> True ind
+def 12080:12084 mapreduce_job_ubertask_maxreduces_desc fUnit
+def 12106:12112 mapreduce_job_ubertask_maxreduces_desc fInterp
+def 12134:12140 mapreduce_job_ubertask_maxreduces_desc fAdvice
+R12153:12190 Top.mapred_config_fields mapreduce_job_ubertask_maxreduces_desc <> mod
+R12237:12254 Top.fieldType FieldModuleFunctor <> modtype
+R12256:12293 Top.mapred_config_fields mapreduce_job_ubertask_maxreduces_desc <> modtype
+mod 12200:12232 <> mapreduce_job_ubertask_maxreduces
+R12401:12416 Top.fieldType Field_ModuleType <> mod
+mod 12347:12396 <> mapreduce_jobtracker_expire_trackers_interval_desc
+def 12432:12436 mapreduce_jobtracker_expire_trackers_interval_desc fName
+def 12503:12507 mapreduce_jobtracker_expire_trackers_interval_desc rTipe
+R12512:12520 Top.fieldType <> rTipe_pos constr
+def 12536:12544 mapreduce_jobtracker_expire_trackers_interval_desc rProperty
+R12560:12567 Coq.Numbers.BinNums <> positive ind
+R12572:12575 Coq.Init.Logic <> True ind
+def 12591:12595 mapreduce_jobtracker_expire_trackers_interval_desc fUnit
+def 12617:12623 mapreduce_jobtracker_expire_trackers_interval_desc fInterp
+def 12645:12651 mapreduce_jobtracker_expire_trackers_interval_desc fAdvice
+R12664:12713 Top.mapred_config_fields mapreduce_jobtracker_expire_trackers_interval_desc <> mod
+R12772:12789 Top.fieldType FieldModuleFunctor <> modtype
+R12791:12840 Top.mapred_config_fields mapreduce_jobtracker_expire_trackers_interval_desc <> modtype
+mod 12723:12767 <> mapreduce_jobtracker_expire_trackers_interval
+R12949:12964 Top.fieldType Field_ModuleType <> mod
+mod 12906:12944 <> mapreduce_jobtracker_handler_count_desc
+def 12980:12984 mapreduce_jobtracker_handler_count_desc fName
+def 13040:13044 mapreduce_jobtracker_handler_count_desc rTipe
+R13049:13057 Top.fieldType <> rTipe_pos constr
+def 13073:13081 mapreduce_jobtracker_handler_count_desc rProperty
+R13097:13104 Coq.Numbers.BinNums <> positive ind
+R13109:13112 Coq.Init.Logic <> True ind
+def 13128:13132 mapreduce_jobtracker_handler_count_desc fUnit
+def 13154:13160 mapreduce_jobtracker_handler_count_desc fInterp
+def 13182:13188 mapreduce_jobtracker_handler_count_desc fAdvice
+R13201:13239 Top.mapred_config_fields mapreduce_jobtracker_handler_count_desc <> mod
+R13287:13304 Top.fieldType FieldModuleFunctor <> modtype
+R13306:13344 Top.mapred_config_fields mapreduce_jobtracker_handler_count_desc <> modtype
+mod 13249:13282 <> mapreduce_jobtracker_handler_count
+R13444:13459 Top.fieldType Field_ModuleType <> mod
+mod 13399:13439 <> mapreduce_jobtracker_maxtasks_perjob_desc
+def 13475:13479 mapreduce_jobtracker_maxtasks_perjob_desc fName
+def 13798:13802 mapreduce_jobtracker_maxtasks_perjob_desc rTipe
+R13807:13822 Top.fieldType <> rTipe_option_pos constr
+def 13838:13846 mapreduce_jobtracker_maxtasks_perjob_desc rProperty
+R13863:13868 Coq.Init.Datatypes <> option ind
+R13870:13877 Coq.Numbers.BinNums <> positive ind
+R13883:13886 Coq.Init.Logic <> True ind
+def 13902:13906 mapreduce_jobtracker_maxtasks_perjob_desc fUnit
+def 13928:13934 mapreduce_jobtracker_maxtasks_perjob_desc fInterp
+def 13956:13962 mapreduce_jobtracker_maxtasks_perjob_desc fAdvice
+R13975:14015 Top.mapred_config_fields mapreduce_jobtracker_maxtasks_perjob_desc <> mod
+R14065:14082 Top.fieldType FieldModuleFunctor <> modtype
+R14084:14124 Top.mapred_config_fields mapreduce_jobtracker_maxtasks_perjob_desc <> modtype
+mod 14025:14060 <> mapreduce_jobtracker_maxtasks_perjob
+R14227:14242 Top.fieldType Field_ModuleType <> mod
+mod 14181:14222 <> mapreduce_jobtracker_taskcache_levels_desc
+def 14258:14262 mapreduce_jobtracker_taskcache_levels_desc fName
+def 14321:14325 mapreduce_jobtracker_taskcache_levels_desc rTipe
+R14330:14338 Top.fieldType <> rTipe_pos constr
+def 14354:14362 mapreduce_jobtracker_taskcache_levels_desc rProperty
+R14378:14385 Coq.Numbers.BinNums <> positive ind
+R14390:14393 Coq.Init.Logic <> True ind
+def 14409:14413 mapreduce_jobtracker_taskcache_levels_desc fUnit
+def 14435:14441 mapreduce_jobtracker_taskcache_levels_desc fInterp
+def 14463:14469 mapreduce_jobtracker_taskcache_levels_desc fAdvice
+R14482:14523 Top.mapred_config_fields mapreduce_jobtracker_taskcache_levels_desc <> mod
+R14574:14591 Top.fieldType FieldModuleFunctor <> modtype
+R14593:14634 Top.mapred_config_fields mapreduce_jobtracker_taskcache_levels_desc <> modtype
+mod 14533:14569 <> mapreduce_jobtracker_taskcache_levels
+R14725:14740 Top.fieldType Field_ModuleType <> mod
+mod 14692:14720 <> mapreduce_map_cpu_vcores_desc
+def 14756:14760 mapreduce_map_cpu_vcores_desc fName
+def 14806:14810 mapreduce_map_cpu_vcores_desc rTipe
+R14815:14823 Top.fieldType <> rTipe_pos constr
+def 14839:14847 mapreduce_map_cpu_vcores_desc rProperty
+R14863:14870 Coq.Numbers.BinNums <> positive ind
+R14876:14881 Coq.PArith.BinPos Pos lt def
+R14890:14907 Top.env_desc <> env_virt_CPU_cores proj
+R14909:14913 Top.env_desc <> myEnv def
+R14883:14887 Top.mapred_config_fields <> value var
+def 14931:14935 mapreduce_map_cpu_vcores_desc fUnit
+def 14957:14963 mapreduce_map_cpu_vcores_desc fInterp
+def 14985:14991 mapreduce_map_cpu_vcores_desc fAdvice
+R15004:15032 Top.mapred_config_fields mapreduce_map_cpu_vcores_desc <> mod
+R15070:15087 Top.fieldType FieldModuleFunctor <> modtype
+R15089:15117 Top.mapred_config_fields mapreduce_map_cpu_vcores_desc <> modtype
+mod 15042:15065 <> mapreduce_map_cpu_vcores
+R15194:15209 Top.fieldType Field_ModuleType <> mod
+mod 15162:15189 <> mapreduce_map_java_opts_desc
+def 15225:15229 mapreduce_map_java_opts_desc fName
+def 15274:15278 mapreduce_map_java_opts_desc rTipe
+R15283:15296 Top.fieldType <> rTipe_JavaOpts constr
+def 15312:15320 mapreduce_map_java_opts_desc rProperty
+R15336:15343 Top.hadoop_base_types <> JavaOpts indrec
+R15348:15351 Coq.Init.Logic <> True ind
+def 15367:15371 mapreduce_map_java_opts_desc fUnit
+def 15393:15399 mapreduce_map_java_opts_desc fInterp
+def 15421:15427 mapreduce_map_java_opts_desc fAdvice
+R15440:15467 Top.mapred_config_fields mapreduce_map_java_opts_desc <> mod
+R15504:15521 Top.fieldType FieldModuleFunctor <> modtype
+R15523:15550 Top.mapred_config_fields mapreduce_map_java_opts_desc <> modtype
+mod 15477:15499 <> mapreduce_map_java_opts
+R15628:15643 Top.fieldType Field_ModuleType <> mod
+mod 15594:15623 <> mapreduce_map_maxattempts_desc
+def 15659:15663 mapreduce_map_maxattempts_desc fName
+def 15710:15714 mapreduce_map_maxattempts_desc rTipe
+R15719:15727 Top.fieldType <> rTipe_pos constr
+def 15743:15751 mapreduce_map_maxattempts_desc rProperty
+R15767:15774 Coq.Numbers.BinNums <> positive ind
+R15779:15782 Coq.Init.Logic <> True ind
+def 15798:15802 mapreduce_map_maxattempts_desc fUnit
+def 15824:15830 mapreduce_map_maxattempts_desc fInterp
+def 15852:15858 mapreduce_map_maxattempts_desc fAdvice
+R15871:15900 Top.mapred_config_fields mapreduce_map_maxattempts_desc <> mod
+R15939:15956 Top.fieldType FieldModuleFunctor <> modtype
+R15958:15987 Top.mapred_config_fields mapreduce_map_maxattempts_desc <> modtype
+mod 15910:15934 <> mapreduce_map_maxattempts
+R16065:16080 Top.fieldType Field_ModuleType <> mod
+mod 16033:16060 <> mapreduce_map_memory_mb_desc
+def 16096:16100 mapreduce_map_memory_mb_desc fName
+def 16145:16149 mapreduce_map_memory_mb_desc rTipe
+R16154:16162 Top.fieldType <> rTipe_pos constr
+def 16221:16229 mapreduce_map_memory_mb_desc rProperty
+R16245:16252 Coq.Numbers.BinNums <> positive ind
+R16257:16262 Coq.PArith.BinPos Pos lt def
+R16271:16285 Top.env_desc <> env_phys_mem_mb proj
+R16287:16291 Top.env_desc <> myEnv def
+R16264:16268 Top.mapred_config_fields <> value var
+def 16308:16312 mapreduce_map_memory_mb_desc fUnit
+def 16334:16340 mapreduce_map_memory_mb_desc fInterp
+def 16362:16368 mapreduce_map_memory_mb_desc fAdvice
+R16381:16408 Top.mapred_config_fields mapreduce_map_memory_mb_desc <> mod
+R16445:16462 Top.fieldType FieldModuleFunctor <> modtype
+R16464:16491 Top.mapred_config_fields mapreduce_map_memory_mb_desc <> modtype
+mod 16418:16440 <> mapreduce_map_memory_mb
+R16573:16588 Top.fieldType Field_ModuleType <> mod
+mod 16535:16568 <> mapreduce_map_output_compress_desc
+def 16604:16608 mapreduce_map_output_compress_desc fName
+def 16659:16663 mapreduce_map_output_compress_desc rTipe
+R16668:16677 Top.fieldType <> rTipe_bool constr
+def 16693:16701 mapreduce_map_output_compress_desc rProperty
+R16717:16720 Coq.Init.Datatypes <> bool ind
+R16725:16728 Coq.Init.Logic <> True ind
+def 16744:16748 mapreduce_map_output_compress_desc fUnit
+def 16770:16776 mapreduce_map_output_compress_desc fInterp
+def 16798:16804 mapreduce_map_output_compress_desc fAdvice
+R16817:16850 Top.mapred_config_fields mapreduce_map_output_compress_desc <> mod
+R16893:16910 Top.fieldType FieldModuleFunctor <> modtype
+R16912:16945 Top.mapred_config_fields mapreduce_map_output_compress_desc <> modtype
+mod 16860:16888 <> mapreduce_map_output_compress
+R17039:17054 Top.fieldType Field_ModuleType <> mod
+mod 16995:17034 <> mapreduce_map_output_compress_codec_desc
+def 17070:17074 mapreduce_map_output_compress_codec_desc fName
+def 17131:17135 mapreduce_map_output_compress_codec_desc rTipe
+R17140:17151 Top.fieldType <> rTipe_string constr
+def 17317:17325 mapreduce_map_output_compress_codec_desc rProperty
+R17341:17346 Coq.Strings.String <> string ind
+R17351:17352 Coq.Lists.List <> In def
+R17361:17375 Top.env_desc <> env_comp_codecs proj
+R17377:17381 Top.env_desc <> myEnv def
+R17354:17358 Top.mapred_config_fields <> value var
+def 17398:17402 mapreduce_map_output_compress_codec_desc fUnit
+def 17424:17430 mapreduce_map_output_compress_codec_desc fInterp
+def 17452:17458 mapreduce_map_output_compress_codec_desc fAdvice
+R17471:17510 Top.mapred_config_fields mapreduce_map_output_compress_codec_desc <> mod
+R17559:17576 Top.fieldType FieldModuleFunctor <> modtype
+R17578:17617 Top.mapred_config_fields mapreduce_map_output_compress_codec_desc <> modtype
+mod 17520:17554 <> mapreduce_map_output_compress_codec
+R17711:17726 Top.fieldType Field_ModuleType <> mod
+mod 17673:17706 <> mapreduce_map_skip_maxrecords_desc
+def 17742:17746 mapreduce_map_skip_maxrecords_desc fName
+def 17797:17801 mapreduce_map_skip_maxrecords_desc rTipe
+R17806:17812 Top.fieldType <> rTipe_N constr
+def 17828:17836 mapreduce_map_skip_maxrecords_desc rProperty
+R17852:17852 Coq.Numbers.BinNums <> N ind
+R17857:17860 Coq.Init.Logic <> True ind
+def 17876:17880 mapreduce_map_skip_maxrecords_desc fUnit
+def 17902:17908 mapreduce_map_skip_maxrecords_desc fInterp
+def 17930:17936 mapreduce_map_skip_maxrecords_desc fAdvice
+R17949:17982 Top.mapred_config_fields mapreduce_map_skip_maxrecords_desc <> mod
+R18025:18042 Top.fieldType FieldModuleFunctor <> modtype
+R18044:18077 Top.mapred_config_fields mapreduce_map_skip_maxrecords_desc <> modtype
+mod 17992:18020 <> mapreduce_map_skip_maxrecords
+R18174:18189 Top.fieldType Field_ModuleType <> mod
+mod 18127:18169 <> mapreduce_map_skip_proc_count_autoincr_desc
+def 18205:18209 mapreduce_map_skip_proc_count_autoincr_desc fName
+def 18269:18273 mapreduce_map_skip_proc_count_autoincr_desc rTipe
+R18278:18287 Top.fieldType <> rTipe_bool constr
+def 18303:18311 mapreduce_map_skip_proc_count_autoincr_desc rProperty
+R18327:18330 Coq.Init.Datatypes <> bool ind
+R18335:18338 Coq.Init.Logic <> True ind
+def 18354:18358 mapreduce_map_skip_proc_count_autoincr_desc fUnit
+def 18380:18386 mapreduce_map_skip_proc_count_autoincr_desc fInterp
+def 18408:18414 mapreduce_map_skip_proc_count_autoincr_desc fAdvice
+R18427:18469 Top.mapred_config_fields mapreduce_map_skip_proc_count_autoincr_desc <> mod
+R18521:18538 Top.fieldType FieldModuleFunctor <> modtype
+R18540:18582 Top.mapred_config_fields mapreduce_map_skip_proc_count_autoincr_desc <> modtype
+mod 18479:18516 <> mapreduce_map_skip_proc_count_autoincr
+R18682:18697 Top.fieldType Field_ModuleType <> mod
+mod 18641:18677 <> mapreduce_map_sort_spill_percent_desc
+def 18713:18717 mapreduce_map_sort_spill_percent_desc fName
+def 18771:18775 mapreduce_map_sort_spill_percent_desc rTipe
+R18780:18790 Top.fieldType <> rTipe_float constr
+def 18806:18814 mapreduce_map_sort_spill_percent_desc rProperty
+R18830:18830 Coq.Reals.Rdefinitions <> R defax
+R18835:18838 Coq.Init.Logic <> True ind
+def 18854:18858 mapreduce_map_sort_spill_percent_desc fUnit
+def 18880:18886 mapreduce_map_sort_spill_percent_desc fInterp
+def 18908:18914 mapreduce_map_sort_spill_percent_desc fAdvice
+R18927:18963 Top.mapred_config_fields mapreduce_map_sort_spill_percent_desc <> mod
+R19009:19026 Top.fieldType FieldModuleFunctor <> modtype
+R19028:19064 Top.mapred_config_fields mapreduce_map_sort_spill_percent_desc <> modtype
+mod 18973:19004 <> mapreduce_map_sort_spill_percent
+R19151:19166 Top.fieldType Field_ModuleType <> mod
+mod 19117:19146 <> mapreduce_map_speculative_desc
+def 19182:19186 mapreduce_map_speculative_desc fName
+def 19233:19237 mapreduce_map_speculative_desc rTipe
+R19242:19251 Top.fieldType <> rTipe_bool constr
+def 19267:19275 mapreduce_map_speculative_desc rProperty
+R19291:19294 Coq.Init.Datatypes <> bool ind
+R19299:19302 Coq.Init.Logic <> True ind
+def 19318:19322 mapreduce_map_speculative_desc fUnit
+def 19344:19350 mapreduce_map_speculative_desc fInterp
+def 19372:19378 mapreduce_map_speculative_desc fAdvice
+R19391:19420 Top.mapred_config_fields mapreduce_map_speculative_desc <> mod
+R19459:19476 Top.fieldType FieldModuleFunctor <> modtype
+R19478:19507 Top.mapred_config_fields mapreduce_map_speculative_desc <> modtype
+mod 19430:19454 <> mapreduce_map_speculative
+R19604:19619 Top.fieldType Field_ModuleType <> mod
+mod 19553:19599 <> mapreduce_output_fileoutputformat_compress_desc
+def 19635:19639 mapreduce_output_fileoutputformat_compress_desc fName
+def 19703:19707 mapreduce_output_fileoutputformat_compress_desc rTipe
+R19712:19721 Top.fieldType <> rTipe_bool constr
+def 19737:19745 mapreduce_output_fileoutputformat_compress_desc rProperty
+R19761:19764 Coq.Init.Datatypes <> bool ind
+R19769:19772 Coq.Init.Logic <> True ind
+def 19788:19792 mapreduce_output_fileoutputformat_compress_desc fUnit
+def 19814:19820 mapreduce_output_fileoutputformat_compress_desc fInterp
+def 19842:19848 mapreduce_output_fileoutputformat_compress_desc fAdvice
+R19861:19907 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_desc <> mod
+R19963:19980 Top.fieldType FieldModuleFunctor <> modtype
+R19982:20028 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_desc <> modtype
+mod 19917:19958 <> mapreduce_output_fileoutputformat_compress
+R20148:20163 Top.fieldType Field_ModuleType <> mod
+mod 20091:20143 <> mapreduce_output_fileoutputformat_compress_codec_desc
+def 20179:20183 mapreduce_output_fileoutputformat_compress_codec_desc fName
+def 20253:20257 mapreduce_output_fileoutputformat_compress_codec_desc rTipe
+R20262:20273 Top.fieldType <> rTipe_string constr
+def 20439:20447 mapreduce_output_fileoutputformat_compress_codec_desc rProperty
+R20463:20468 Coq.Strings.String <> string ind
+R20473:20474 Coq.Lists.List <> In def
+R20483:20497 Top.env_desc <> env_comp_codecs proj
+R20499:20503 Top.env_desc <> myEnv def
+R20476:20480 Top.mapred_config_fields <> value var
+def 20520:20524 mapreduce_output_fileoutputformat_compress_codec_desc fUnit
+def 20546:20552 mapreduce_output_fileoutputformat_compress_codec_desc fInterp
+def 20574:20580 mapreduce_output_fileoutputformat_compress_codec_desc fAdvice
+R20593:20645 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_codec_desc <> mod
+R20707:20724 Top.fieldType FieldModuleFunctor <> modtype
+R20726:20778 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_codec_desc <> modtype
+mod 20655:20702 <> mapreduce_output_fileoutputformat_compress_codec
+R20903:20918 Top.fieldType Field_ModuleType <> mod
+mod 20847:20898 <> mapreduce_output_fileoutputformat_compress_type_desc
+def 20934:20938 mapreduce_output_fileoutputformat_compress_type_desc fName
+def 21007:21011 mapreduce_output_fileoutputformat_compress_type_desc rTipe
+R21016:21027 Top.fieldType <> rTipe_string constr
+def 21193:21201 mapreduce_output_fileoutputformat_compress_type_desc rProperty
+R21217:21222 Coq.Strings.String <> string ind
+R21227:21228 Coq.Lists.List <> In def
+R21243:21244 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R21253:21254 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R21262:21263 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R21264:21266 Coq.Lists.List <> nil syndef
+R21230:21234 Top.mapred_config_fields <> value var
+def 21283:21287 mapreduce_output_fileoutputformat_compress_type_desc fUnit
+def 21309:21315 mapreduce_output_fileoutputformat_compress_type_desc fInterp
+def 21337:21343 mapreduce_output_fileoutputformat_compress_type_desc fAdvice
+R21356:21407 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_type_desc <> mod
+R21468:21485 Top.fieldType FieldModuleFunctor <> modtype
+R21487:21538 Top.mapred_config_fields mapreduce_output_fileoutputformat_compress_type_desc <> modtype
+mod 21417:21463 <> mapreduce_output_fileoutputformat_compress_type
+R21642:21657 Top.fieldType Field_ModuleType <> mod
+mod 21606:21637 <> mapreduce_reduce_cpu_vcores_desc
+def 21673:21677 mapreduce_reduce_cpu_vcores_desc fName
+def 21726:21730 mapreduce_reduce_cpu_vcores_desc rTipe
+R21735:21743 Top.fieldType <> rTipe_pos constr
+def 21759:21767 mapreduce_reduce_cpu_vcores_desc rProperty
+R21783:21790 Coq.Numbers.BinNums <> positive ind
+R21795:21798 Coq.Init.Logic <> True ind
+def 21814:21818 mapreduce_reduce_cpu_vcores_desc fUnit
+def 21840:21846 mapreduce_reduce_cpu_vcores_desc fInterp
+def 21868:21874 mapreduce_reduce_cpu_vcores_desc fAdvice
+R21887:21918 Top.mapred_config_fields mapreduce_reduce_cpu_vcores_desc <> mod
+R21959:21976 Top.fieldType FieldModuleFunctor <> modtype
+R21978:22009 Top.mapred_config_fields mapreduce_reduce_cpu_vcores_desc <> modtype
+mod 21928:21954 <> mapreduce_reduce_cpu_vcores
+R22103:22118 Top.fieldType Field_ModuleType <> mod
+mod 22057:22098 <> mapreduce_reduce_input_buffer_percent_desc
+def 22134:22138 mapreduce_reduce_input_buffer_percent_desc fName
+def 22197:22201 mapreduce_reduce_input_buffer_percent_desc rTipe
+R22206:22216 Top.fieldType <> rTipe_float constr
+def 22232:22240 mapreduce_reduce_input_buffer_percent_desc rProperty
+R22256:22256 Coq.Reals.Rdefinitions <> R defax
+R22261:22264 Coq.Init.Logic <> True ind
+def 22280:22284 mapreduce_reduce_input_buffer_percent_desc fUnit
+def 22306:22312 mapreduce_reduce_input_buffer_percent_desc fInterp
+def 22334:22340 mapreduce_reduce_input_buffer_percent_desc fAdvice
+R22353:22394 Top.mapred_config_fields mapreduce_reduce_input_buffer_percent_desc <> mod
+R22445:22462 Top.fieldType FieldModuleFunctor <> modtype
+R22464:22505 Top.mapred_config_fields mapreduce_reduce_input_buffer_percent_desc <> modtype
+mod 22404:22440 <> mapreduce_reduce_input_buffer_percent
+R22598:22613 Top.fieldType Field_ModuleType <> mod
+mod 22563:22593 <> mapreduce_reduce_java_opts_desc
+def 22629:22633 mapreduce_reduce_java_opts_desc fName
+def 22681:22685 mapreduce_reduce_java_opts_desc rTipe
+R22690:22703 Top.fieldType <> rTipe_JavaOpts constr
+def 22719:22727 mapreduce_reduce_java_opts_desc rProperty
+R22743:22750 Top.hadoop_base_types <> JavaOpts indrec
+R22755:22758 Coq.Init.Logic <> True ind
+def 22774:22778 mapreduce_reduce_java_opts_desc fUnit
+def 22800:22806 mapreduce_reduce_java_opts_desc fInterp
+def 22828:22834 mapreduce_reduce_java_opts_desc fAdvice
+R22847:22877 Top.mapred_config_fields mapreduce_reduce_java_opts_desc <> mod
+R22917:22934 Top.fieldType FieldModuleFunctor <> modtype
+R22936:22966 Top.mapred_config_fields mapreduce_reduce_java_opts_desc <> modtype
+mod 22887:22912 <> mapreduce_reduce_java_opts
+R23063:23078 Top.fieldType Field_ModuleType <> mod
+mod 23013:23058 <> mapreduce_reduce_markreset_buffer_percent_desc
+def 23094:23098 mapreduce_reduce_markreset_buffer_percent_desc fName
+def 23161:23165 mapreduce_reduce_markreset_buffer_percent_desc rTipe
+R23170:23180 Top.fieldType <> rTipe_float constr
+def 23196:23204 mapreduce_reduce_markreset_buffer_percent_desc rProperty
+R23220:23220 Coq.Reals.Rdefinitions <> R defax
+R23225:23228 Coq.Init.Logic <> True ind
+def 23244:23248 mapreduce_reduce_markreset_buffer_percent_desc fUnit
+def 23270:23276 mapreduce_reduce_markreset_buffer_percent_desc fInterp
+def 23298:23304 mapreduce_reduce_markreset_buffer_percent_desc fAdvice
+R23317:23362 Top.mapred_config_fields mapreduce_reduce_markreset_buffer_percent_desc <> mod
+R23417:23434 Top.fieldType FieldModuleFunctor <> modtype
+R23436:23481 Top.mapred_config_fields mapreduce_reduce_markreset_buffer_percent_desc <> modtype
+mod 23372:23412 <> mapreduce_reduce_markreset_buffer_percent
+R23580:23595 Top.fieldType Field_ModuleType <> mod
+mod 23543:23575 <> mapreduce_reduce_maxattempts_desc
+def 23611:23615 mapreduce_reduce_maxattempts_desc fName
+def 23665:23669 mapreduce_reduce_maxattempts_desc rTipe
+R23674:23682 Top.fieldType <> rTipe_pos constr
+def 23698:23706 mapreduce_reduce_maxattempts_desc rProperty
+R23722:23729 Coq.Numbers.BinNums <> positive ind
+R23734:23737 Coq.Init.Logic <> True ind
+def 23753:23757 mapreduce_reduce_maxattempts_desc fUnit
+def 23779:23785 mapreduce_reduce_maxattempts_desc fInterp
+def 23807:23813 mapreduce_reduce_maxattempts_desc fAdvice
+R23826:23858 Top.mapred_config_fields mapreduce_reduce_maxattempts_desc <> mod
+R23900:23917 Top.fieldType FieldModuleFunctor <> modtype
+R23919:23951 Top.mapred_config_fields mapreduce_reduce_maxattempts_desc <> modtype
+mod 23868:23895 <> mapreduce_reduce_maxattempts
+R24035:24050 Top.fieldType Field_ModuleType <> mod
+mod 24000:24030 <> mapreduce_reduce_memory_mb_desc
+def 24066:24070 mapreduce_reduce_memory_mb_desc fName
+def 24118:24122 mapreduce_reduce_memory_mb_desc rTipe
+R24127:24135 Top.fieldType <> rTipe_pos constr
+def 24151:24159 mapreduce_reduce_memory_mb_desc rProperty
+R24175:24182 Coq.Numbers.BinNums <> positive ind
+R24187:24190 Coq.Init.Logic <> True ind
+def 24206:24210 mapreduce_reduce_memory_mb_desc fUnit
+def 24232:24238 mapreduce_reduce_memory_mb_desc fInterp
+def 24260:24266 mapreduce_reduce_memory_mb_desc fAdvice
+R24279:24309 Top.mapred_config_fields mapreduce_reduce_memory_mb_desc <> mod
+R24349:24366 Top.fieldType FieldModuleFunctor <> modtype
+R24368:24398 Top.mapred_config_fields mapreduce_reduce_memory_mb_desc <> modtype
+mod 24319:24344 <> mapreduce_reduce_memory_mb
+R24492:24507 Top.fieldType Field_ModuleType <> mod
+mod 24445:24487 <> mapreduce_reduce_merge_inmem_threshold_desc
+def 24523:24527 mapreduce_reduce_merge_inmem_threshold_desc fName
+def 24587:24591 mapreduce_reduce_merge_inmem_threshold_desc rTipe
+R24596:24611 Top.fieldType <> rTipe_option_pos constr
+def 24627:24635 mapreduce_reduce_merge_inmem_threshold_desc rProperty
+R24652:24657 Coq.Init.Datatypes <> option ind
+R24659:24666 Coq.Numbers.BinNums <> positive ind
+R24672:24675 Coq.Init.Logic <> True ind
+def 24691:24695 mapreduce_reduce_merge_inmem_threshold_desc fUnit
+def 24717:24723 mapreduce_reduce_merge_inmem_threshold_desc fInterp
+def 24745:24751 mapreduce_reduce_merge_inmem_threshold_desc fAdvice
+R24764:24806 Top.mapred_config_fields mapreduce_reduce_merge_inmem_threshold_desc <> mod
+R24858:24875 Top.fieldType FieldModuleFunctor <> modtype
+R24877:24919 Top.mapred_config_fields mapreduce_reduce_merge_inmem_threshold_desc <> modtype
+mod 24816:24853 <> mapreduce_reduce_merge_inmem_threshold
+R25032:25047 Top.fieldType Field_ModuleType <> mod
+mod 24978:25027 <> mapreduce_reduce_shuffle_input_buffer_percent_desc
+def 25063:25067 mapreduce_reduce_shuffle_input_buffer_percent_desc fName
+def 25134:25138 mapreduce_reduce_shuffle_input_buffer_percent_desc rTipe
+R25143:25153 Top.fieldType <> rTipe_float constr
+def 25169:25177 mapreduce_reduce_shuffle_input_buffer_percent_desc rProperty
+R25193:25193 Coq.Reals.Rdefinitions <> R defax
+R25198:25201 Coq.Init.Logic <> True ind
+def 25217:25221 mapreduce_reduce_shuffle_input_buffer_percent_desc fUnit
+def 25243:25249 mapreduce_reduce_shuffle_input_buffer_percent_desc fInterp
+def 25271:25277 mapreduce_reduce_shuffle_input_buffer_percent_desc fAdvice
+R25290:25339 Top.mapred_config_fields mapreduce_reduce_shuffle_input_buffer_percent_desc <> mod
+R25398:25415 Top.fieldType FieldModuleFunctor <> modtype
+R25417:25466 Top.mapred_config_fields mapreduce_reduce_shuffle_input_buffer_percent_desc <> modtype
+mod 25349:25393 <> mapreduce_reduce_shuffle_input_buffer_percent
+R25586:25601 Top.fieldType Field_ModuleType <> mod
+mod 25532:25581 <> mapreduce_reduce_shuffle_memory_limit_percent_desc
+def 25617:25621 mapreduce_reduce_shuffle_memory_limit_percent_desc fName
+def 25688:25692 mapreduce_reduce_shuffle_memory_limit_percent_desc rTipe
+R25697:25707 Top.fieldType <> rTipe_float constr
+def 25723:25731 mapreduce_reduce_shuffle_memory_limit_percent_desc rProperty
+R25747:25747 Coq.Reals.Rdefinitions <> R defax
+R25752:25755 Coq.Init.Logic <> True ind
+def 25771:25775 mapreduce_reduce_shuffle_memory_limit_percent_desc fUnit
+def 25797:25803 mapreduce_reduce_shuffle_memory_limit_percent_desc fInterp
+def 25825:25831 mapreduce_reduce_shuffle_memory_limit_percent_desc fAdvice
+R25844:25893 Top.mapred_config_fields mapreduce_reduce_shuffle_memory_limit_percent_desc <> mod
+R25952:25969 Top.fieldType FieldModuleFunctor <> modtype
+R25971:26020 Top.mapred_config_fields mapreduce_reduce_shuffle_memory_limit_percent_desc <> modtype
+mod 25903:25947 <> mapreduce_reduce_shuffle_memory_limit_percent
+R26133:26148 Top.fieldType Field_ModuleType <> mod
+mod 26086:26128 <> mapreduce_reduce_shuffle_merge_percent_desc
+def 26164:26168 mapreduce_reduce_shuffle_merge_percent_desc fName
+def 26228:26232 mapreduce_reduce_shuffle_merge_percent_desc rTipe
+R26237:26247 Top.fieldType <> rTipe_float constr
+def 26263:26271 mapreduce_reduce_shuffle_merge_percent_desc rProperty
+R26287:26287 Coq.Reals.Rdefinitions <> R defax
+R26292:26295 Coq.Init.Logic <> True ind
+def 26311:26315 mapreduce_reduce_shuffle_merge_percent_desc fUnit
+def 26337:26343 mapreduce_reduce_shuffle_merge_percent_desc fInterp
+def 26365:26371 mapreduce_reduce_shuffle_merge_percent_desc fAdvice
+R26384:26426 Top.mapred_config_fields mapreduce_reduce_shuffle_merge_percent_desc <> mod
+R26478:26495 Top.fieldType FieldModuleFunctor <> modtype
+R26497:26539 Top.mapred_config_fields mapreduce_reduce_shuffle_merge_percent_desc <> modtype
+mod 26436:26473 <> mapreduce_reduce_shuffle_merge_percent
+R26646:26661 Top.fieldType Field_ModuleType <> mod
+mod 26598:26641 <> mapreduce_reduce_shuffle_parallelcopies_desc
+def 26677:26681 mapreduce_reduce_shuffle_parallelcopies_desc fName
+def 26742:26746 mapreduce_reduce_shuffle_parallelcopies_desc rTipe
+R26751:26759 Top.fieldType <> rTipe_pos constr
+def 26775:26783 mapreduce_reduce_shuffle_parallelcopies_desc rProperty
+R26799:26806 Coq.Numbers.BinNums <> positive ind
+R26811:26814 Coq.Init.Logic <> True ind
+def 26830:26834 mapreduce_reduce_shuffle_parallelcopies_desc fUnit
+def 26856:26862 mapreduce_reduce_shuffle_parallelcopies_desc fInterp
+def 26884:26890 mapreduce_reduce_shuffle_parallelcopies_desc fAdvice
+R26903:26946 Top.mapred_config_fields mapreduce_reduce_shuffle_parallelcopies_desc <> mod
+R26999:27016 Top.fieldType FieldModuleFunctor <> modtype
+R27018:27061 Top.mapred_config_fields mapreduce_reduce_shuffle_parallelcopies_desc <> modtype
+mod 26956:26994 <> mapreduce_reduce_shuffle_parallelcopies
+R27174:27189 Top.fieldType Field_ModuleType <> mod
+mod 27121:27169 <> mapreduce_reduce_shuffle_retry__delay_max_ms_desc
+def 27205:27209 mapreduce_reduce_shuffle_retry__delay_max_ms_desc fName
+def 27274:27278 mapreduce_reduce_shuffle_retry__delay_max_ms_desc rTipe
+R27283:27291 Top.fieldType <> rTipe_pos constr
+def 27307:27315 mapreduce_reduce_shuffle_retry__delay_max_ms_desc rProperty
+R27331:27338 Coq.Numbers.BinNums <> positive ind
+R27343:27346 Coq.Init.Logic <> True ind
+def 27362:27366 mapreduce_reduce_shuffle_retry__delay_max_ms_desc fUnit
+def 27388:27394 mapreduce_reduce_shuffle_retry__delay_max_ms_desc fInterp
+def 27416:27422 mapreduce_reduce_shuffle_retry__delay_max_ms_desc fAdvice
+R27435:27483 Top.mapred_config_fields mapreduce_reduce_shuffle_retry__delay_max_ms_desc <> mod
+R27541:27558 Top.fieldType FieldModuleFunctor <> modtype
+R27560:27608 Top.mapred_config_fields mapreduce_reduce_shuffle_retry__delay_max_ms_desc <> modtype
+mod 27493:27536 <> mapreduce_reduce_shuffle_retry__delay_max_ms
+R27715:27730 Top.fieldType Field_ModuleType <> mod
+mod 27673:27710 <> mapreduce_shuffle_max_connections_desc
+def 27746:27750 mapreduce_shuffle_max_connections_desc fName
+def 27805:27809 mapreduce_shuffle_max_connections_desc rTipe
+R27814:27829 Top.fieldType <> rTipe_option_pos constr
+def 27845:27853 mapreduce_shuffle_max_connections_desc rProperty
+R27870:27875 Coq.Init.Datatypes <> option ind
+R27877:27884 Coq.Numbers.BinNums <> positive ind
+R27890:27893 Coq.Init.Logic <> True ind
+def 27909:27913 mapreduce_shuffle_max_connections_desc fUnit
+def 27935:27941 mapreduce_shuffle_max_connections_desc fInterp
+def 27963:27969 mapreduce_shuffle_max_connections_desc fAdvice
+R27982:28019 Top.mapred_config_fields mapreduce_shuffle_max_connections_desc <> mod
+R28066:28083 Top.fieldType FieldModuleFunctor <> modtype
+R28085:28122 Top.mapred_config_fields mapreduce_shuffle_max_connections_desc <> modtype
+mod 28029:28061 <> mapreduce_shuffle_max_connections
+R28214:28229 Top.fieldType Field_ModuleType <> mod
+mod 28176:28209 <> mapreduce_shuffle_max_threads_desc
+def 28245:28249 mapreduce_shuffle_max_threads_desc fName
+def 28300:28304 mapreduce_shuffle_max_threads_desc rTipe
+R28309:28315 Top.fieldType <> rTipe_N constr
+def 28331:28339 mapreduce_shuffle_max_threads_desc rProperty
+R28355:28355 Coq.Numbers.BinNums <> N ind
+R28360:28363 Coq.Init.Logic <> True ind
+def 28379:28383 mapreduce_shuffle_max_threads_desc fUnit
+def 28405:28411 mapreduce_shuffle_max_threads_desc fInterp
+def 28433:28439 mapreduce_shuffle_max_threads_desc fAdvice
+R28452:28485 Top.mapred_config_fields mapreduce_shuffle_max_threads_desc <> mod
+R28528:28545 Top.fieldType FieldModuleFunctor <> modtype
+R28547:28580 Top.mapred_config_fields mapreduce_shuffle_max_threads_desc <> modtype
+mod 28495:28523 <> mapreduce_shuffle_max_threads
+R28677:28692 Top.fieldType Field_ModuleType <> mod
+mod 28630:28672 <> mapreduce_shuffle_transfer_buffer_size_desc
+def 28708:28712 mapreduce_shuffle_transfer_buffer_size_desc fName
+def 28772:28776 mapreduce_shuffle_transfer_buffer_size_desc rTipe
+R28781:28789 Top.fieldType <> rTipe_pos constr
+def 28805:28813 mapreduce_shuffle_transfer_buffer_size_desc rProperty
+R28829:28836 Coq.Numbers.BinNums <> positive ind
+R28841:28844 Coq.Init.Logic <> True ind
+def 28860:28864 mapreduce_shuffle_transfer_buffer_size_desc fUnit
+def 28886:28892 mapreduce_shuffle_transfer_buffer_size_desc fInterp
+def 28914:28920 mapreduce_shuffle_transfer_buffer_size_desc fAdvice
+R28933:28975 Top.mapred_config_fields mapreduce_shuffle_transfer_buffer_size_desc <> mod
+R29027:29044 Top.fieldType FieldModuleFunctor <> modtype
+R29046:29088 Top.mapred_config_fields mapreduce_shuffle_transfer_buffer_size_desc <> modtype
+mod 28985:29022 <> mapreduce_shuffle_transfer_buffer_size
+R29195:29210 Top.fieldType Field_ModuleType <> mod
+mod 29147:29190 <> mapreduce_task_combine_progress_records_desc
+def 29226:29230 mapreduce_task_combine_progress_records_desc fName
+def 29291:29295 mapreduce_task_combine_progress_records_desc rTipe
+R29300:29308 Top.fieldType <> rTipe_pos constr
+def 29324:29332 mapreduce_task_combine_progress_records_desc rProperty
+R29348:29355 Coq.Numbers.BinNums <> positive ind
+R29360:29363 Coq.Init.Logic <> True ind
+def 29379:29383 mapreduce_task_combine_progress_records_desc fUnit
+def 29405:29411 mapreduce_task_combine_progress_records_desc fInterp
+def 29433:29439 mapreduce_task_combine_progress_records_desc fAdvice
+R29452:29495 Top.mapred_config_fields mapreduce_task_combine_progress_records_desc <> mod
+R29548:29565 Top.fieldType FieldModuleFunctor <> modtype
+R29567:29610 Top.mapred_config_fields mapreduce_task_combine_progress_records_desc <> modtype
+mod 29505:29543 <> mapreduce_task_combine_progress_records
+R29708:29723 Top.fieldType Field_ModuleType <> mod
+mod 29670:29703 <> mapreduce_task_io_sort_factor_desc
+def 29739:29743 mapreduce_task_io_sort_factor_desc fName
+def 29794:29798 mapreduce_task_io_sort_factor_desc rTipe
+R29803:29811 Top.fieldType <> rTipe_pos constr
+def 29827:29835 mapreduce_task_io_sort_factor_desc rProperty
+R29851:29858 Coq.Numbers.BinNums <> positive ind
+R29863:29866 Coq.Init.Logic <> True ind
+def 29882:29886 mapreduce_task_io_sort_factor_desc fUnit
+def 29908:29914 mapreduce_task_io_sort_factor_desc fInterp
+def 29936:29942 mapreduce_task_io_sort_factor_desc fAdvice
+R29955:29988 Top.mapred_config_fields mapreduce_task_io_sort_factor_desc <> mod
+R30031:30048 Top.fieldType FieldModuleFunctor <> modtype
+R30050:30083 Top.mapred_config_fields mapreduce_task_io_sort_factor_desc <> modtype
+mod 29998:30026 <> mapreduce_task_io_sort_factor
+R30167:30182 Top.fieldType Field_ModuleType <> mod
+mod 30133:30162 <> mapreduce_task_io_sort_mb_desc
+def 30198:30202 mapreduce_task_io_sort_mb_desc fName
+def 30249:30253 mapreduce_task_io_sort_mb_desc rTipe
+R30258:30266 Top.fieldType <> rTipe_pos constr
+def 30282:30290 mapreduce_task_io_sort_mb_desc rProperty
+R30306:30313 Coq.Numbers.BinNums <> positive ind
+R30318:30321 Coq.Init.Logic <> True ind
+def 30337:30341 mapreduce_task_io_sort_mb_desc fUnit
+def 30363:30369 mapreduce_task_io_sort_mb_desc fInterp
+def 30391:30397 mapreduce_task_io_sort_mb_desc fAdvice
+R30410:30439 Top.mapred_config_fields mapreduce_task_io_sort_mb_desc <> mod
+R30478:30495 Top.fieldType FieldModuleFunctor <> modtype
+R30497:30526 Top.mapred_config_fields mapreduce_task_io_sort_mb_desc <> modtype
+mod 30449:30473 <> mapreduce_task_io_sort_mb
+R30618:30633 Top.fieldType Field_ModuleType <> mod
+mod 30572:30613 <> mapreduce_task_merge_progress_records_desc
+def 30649:30653 mapreduce_task_merge_progress_records_desc fName
+def 30712:30716 mapreduce_task_merge_progress_records_desc rTipe
+R30721:30729 Top.fieldType <> rTipe_pos constr
+def 30745:30753 mapreduce_task_merge_progress_records_desc rProperty
+R30769:30776 Coq.Numbers.BinNums <> positive ind
+R30781:30784 Coq.Init.Logic <> True ind
+def 30800:30804 mapreduce_task_merge_progress_records_desc fUnit
+def 30826:30832 mapreduce_task_merge_progress_records_desc fInterp
+def 30854:30860 mapreduce_task_merge_progress_records_desc fAdvice
+R30873:30914 Top.mapred_config_fields mapreduce_task_merge_progress_records_desc <> mod
+R30965:30982 Top.fieldType FieldModuleFunctor <> modtype
+R30984:31025 Top.mapred_config_fields mapreduce_task_merge_progress_records_desc <> modtype
+mod 30924:30960 <> mapreduce_task_merge_progress_records
+R31119:31134 Top.fieldType Field_ModuleType <> mod
+mod 31083:31114 <> mapreduce_task_profile_maps_desc
+def 31150:31154 mapreduce_task_profile_maps_desc fName
+def 31203:31207 mapreduce_task_profile_maps_desc rTipe
+R31212:31223 Top.fieldType <> rTipe_string constr
+def 31239:31247 mapreduce_task_profile_maps_desc rProperty
+R31263:31268 Coq.Strings.String <> string ind
+R31273:31276 Coq.Init.Logic <> True ind
+def 31292:31296 mapreduce_task_profile_maps_desc fUnit
+def 31318:31324 mapreduce_task_profile_maps_desc fInterp
+def 31346:31352 mapreduce_task_profile_maps_desc fAdvice
+R31365:31396 Top.mapred_config_fields mapreduce_task_profile_maps_desc <> mod
+R31437:31454 Top.fieldType FieldModuleFunctor <> modtype
+R31456:31487 Top.mapred_config_fields mapreduce_task_profile_maps_desc <> modtype
+mod 31406:31432 <> mapreduce_task_profile_maps
+R31574:31589 Top.fieldType Field_ModuleType <> mod
+mod 31535:31569 <> mapreduce_task_profile_reduces_desc
+def 31605:31609 mapreduce_task_profile_reduces_desc fName
+def 31661:31665 mapreduce_task_profile_reduces_desc rTipe
+R31670:31681 Top.fieldType <> rTipe_string constr
+def 31697:31705 mapreduce_task_profile_reduces_desc rProperty
+R31721:31726 Coq.Strings.String <> string ind
+R31731:31734 Coq.Init.Logic <> True ind
+def 31750:31754 mapreduce_task_profile_reduces_desc fUnit
+def 31776:31782 mapreduce_task_profile_reduces_desc fInterp
+def 31804:31810 mapreduce_task_profile_reduces_desc fAdvice
+R31823:31857 Top.mapred_config_fields mapreduce_task_profile_reduces_desc <> mod
+R31901:31918 Top.fieldType FieldModuleFunctor <> modtype
+R31920:31954 Top.mapred_config_fields mapreduce_task_profile_reduces_desc <> modtype
+mod 31867:31896 <> mapreduce_task_profile_reduces
+R32048:32063 Top.fieldType Field_ModuleType <> mod
+mod 32005:32043 <> mapreduce_tasktracker_http_threads_desc
+def 32079:32083 mapreduce_tasktracker_http_threads_desc fName
+def 32139:32143 mapreduce_tasktracker_http_threads_desc rTipe
+R32148:32156 Top.fieldType <> rTipe_pos constr
+def 32172:32180 mapreduce_tasktracker_http_threads_desc rProperty
+R32196:32203 Coq.Numbers.BinNums <> positive ind
+R32208:32211 Coq.Init.Logic <> True ind
+def 32227:32231 mapreduce_tasktracker_http_threads_desc fUnit
+def 32253:32259 mapreduce_tasktracker_http_threads_desc fInterp
+def 32281:32287 mapreduce_tasktracker_http_threads_desc fAdvice
+R32300:32338 Top.mapred_config_fields mapreduce_tasktracker_http_threads_desc <> mod
+R32386:32403 Top.fieldType FieldModuleFunctor <> modtype
+R32405:32443 Top.mapred_config_fields mapreduce_tasktracker_http_threads_desc <> modtype
+mod 32348:32381 <> mapreduce_tasktracker_http_threads
+R32542:32557 Top.fieldType Field_ModuleType <> mod
+mod 32498:32537 <> mapreduce_tasktracker_indexcache_mb_desc
+def 32573:32577 mapreduce_tasktracker_indexcache_mb_desc fName
+def 32634:32638 mapreduce_tasktracker_indexcache_mb_desc rTipe
+R32643:32651 Top.fieldType <> rTipe_pos constr
+def 32667:32675 mapreduce_tasktracker_indexcache_mb_desc rProperty
+R32691:32698 Coq.Numbers.BinNums <> positive ind
+R32703:32706 Coq.Init.Logic <> True ind
+def 32722:32726 mapreduce_tasktracker_indexcache_mb_desc fUnit
+def 32748:32754 mapreduce_tasktracker_indexcache_mb_desc fInterp
+def 32776:32782 mapreduce_tasktracker_indexcache_mb_desc fAdvice
+R32795:32834 Top.mapred_config_fields mapreduce_tasktracker_indexcache_mb_desc <> mod
+R32883:32900 Top.fieldType FieldModuleFunctor <> modtype
+R32902:32941 Top.mapred_config_fields mapreduce_tasktracker_indexcache_mb_desc <> modtype
+mod 32844:32878 <> mapreduce_tasktracker_indexcache_mb
+R33045:33060 Top.fieldType Field_ModuleType <> mod
+mod 32997:33040 <> mapreduce_tasktracker_map_tasks_maximum_desc
+def 33076:33080 mapreduce_tasktracker_map_tasks_maximum_desc fName
+def 33141:33145 mapreduce_tasktracker_map_tasks_maximum_desc rTipe
+R33150:33158 Top.fieldType <> rTipe_pos constr
+def 33174:33182 mapreduce_tasktracker_map_tasks_maximum_desc rProperty
+R33198:33205 Coq.Numbers.BinNums <> positive ind
+R33210:33213 Coq.Init.Logic <> True ind
+def 33229:33233 mapreduce_tasktracker_map_tasks_maximum_desc fUnit
+def 33255:33261 mapreduce_tasktracker_map_tasks_maximum_desc fInterp
+def 33283:33289 mapreduce_tasktracker_map_tasks_maximum_desc fAdvice
+R33302:33345 Top.mapred_config_fields mapreduce_tasktracker_map_tasks_maximum_desc <> mod
+R33398:33415 Top.fieldType FieldModuleFunctor <> modtype
+R33417:33460 Top.mapred_config_fields mapreduce_tasktracker_map_tasks_maximum_desc <> modtype
+mod 33355:33393 <> mapreduce_tasktracker_map_tasks_maximum
+R33571:33586 Top.fieldType Field_ModuleType <> mod
+mod 33520:33566 <> mapreduce_tasktracker_reduce_tasks_maximum_desc
+def 33602:33606 mapreduce_tasktracker_reduce_tasks_maximum_desc fName
+def 33670:33674 mapreduce_tasktracker_reduce_tasks_maximum_desc rTipe
+R33679:33687 Top.fieldType <> rTipe_pos constr
+def 33703:33711 mapreduce_tasktracker_reduce_tasks_maximum_desc rProperty
+R33727:33734 Coq.Numbers.BinNums <> positive ind
+R33739:33742 Coq.Init.Logic <> True ind
+def 33758:33762 mapreduce_tasktracker_reduce_tasks_maximum_desc fUnit
+def 33784:33790 mapreduce_tasktracker_reduce_tasks_maximum_desc fInterp
+def 33812:33818 mapreduce_tasktracker_reduce_tasks_maximum_desc fAdvice
+R33831:33877 Top.mapred_config_fields mapreduce_tasktracker_reduce_tasks_maximum_desc <> mod
+R33933:33950 Top.fieldType FieldModuleFunctor <> modtype
+R33952:33998 Top.mapred_config_fields mapreduce_tasktracker_reduce_tasks_maximum_desc <> modtype
+mod 33887:33928 <> mapreduce_tasktracker_reduce_tasks_maximum
+R34128:34143 Top.fieldType Field_ModuleType <> mod
+mod 34061:34123 <> mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc
+def 34159:34163 mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc fName
+def 34243:34247 mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc rTipe
+R34252:34260 Top.fieldType <> rTipe_pos constr
+def 34276:34284 mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc rProperty
+R34300:34307 Coq.Numbers.BinNums <> positive ind
+R34312:34315 Coq.Init.Logic <> True ind
+def 34331:34335 mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc fUnit
+def 34357:34363 mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc fInterp
+def 34385:34391 mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc fAdvice
+R34404:34466 Top.mapred_config_fields mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc <> mod
+R34538:34555 Top.fieldType FieldModuleFunctor <> modtype
+R34557:34619 Top.mapred_config_fields mapreduce_tasktracker_taskmemorymanager_monitoringinterval_desc <> modtype
+mod 34476:34533 <> mapreduce_tasktracker_taskmemorymanager_monitoringinterval
+R34761:34776 Top.fieldType Field_ModuleType <> mod
+mod 34698:34756 <> mapreduce_job_reducer_unconditional__preempt_delay_sec_desc
+def 34792:34796 mapreduce_job_reducer_unconditional__preempt_delay_sec_desc fName
+def 34871:34875 mapreduce_job_reducer_unconditional__preempt_delay_sec_desc rTipe
+R34880:34888 Top.fieldType <> rTipe_pos constr
+def 34904:34912 mapreduce_job_reducer_unconditional__preempt_delay_sec_desc rProperty
+R34928:34935 Coq.Numbers.BinNums <> positive ind
+R34940:34943 Coq.Init.Logic <> True ind
+def 34959:34963 mapreduce_job_reducer_unconditional__preempt_delay_sec_desc fUnit
+def 34985:34991 mapreduce_job_reducer_unconditional__preempt_delay_sec_desc fInterp
+def 35013:35019 mapreduce_job_reducer_unconditional__preempt_delay_sec_desc fAdvice
+R35032:35090 Top.mapred_config_fields mapreduce_job_reducer_unconditional__preempt_delay_sec_desc <> mod
+R35158:35175 Top.fieldType FieldModuleFunctor <> modtype
+R35177:35235 Top.mapred_config_fields mapreduce_job_reducer_unconditional__preempt_delay_sec_desc <> modtype
+mod 35100:35153 <> mapreduce_job_reducer_unconditional__preempt_delay_sec
+R35354:35369 Top.fieldType Field_ModuleType <> mod
+mod 35310:35349 <> yarn_app_mapreduce_am_command__opts_desc
+def 35385:35389 yarn_app_mapreduce_am_command__opts_desc fName
+def 35445:35449 yarn_app_mapreduce_am_command__opts_desc rTipe
+R35454:35467 Top.fieldType <> rTipe_JavaOpts constr
+def 35483:35491 yarn_app_mapreduce_am_command__opts_desc rProperty
+R35507:35514 Top.hadoop_base_types <> JavaOpts indrec
+R35519:35522 Coq.Init.Logic <> True ind
+def 35538:35542 yarn_app_mapreduce_am_command__opts_desc fUnit
+def 35564:35570 yarn_app_mapreduce_am_command__opts_desc fInterp
+def 35592:35598 yarn_app_mapreduce_am_command__opts_desc fAdvice
+R35611:35650 Top.mapred_config_fields yarn_app_mapreduce_am_command__opts_desc <> mod
+R35699:35716 Top.fieldType FieldModuleFunctor <> modtype
+R35718:35757 Top.mapred_config_fields yarn_app_mapreduce_am_command__opts_desc <> modtype
+mod 35660:35694 <> yarn_app_mapreduce_am_command__opts
+R35887:35902 Top.fieldType Field_ModuleType <> mod
+mod 35813:35882 <> yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc
+def 35918:35922 yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc fName
+def 36007:36011 yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc rTipe
+R36016:36024 Top.fieldType <> rTipe_pos constr
+def 36040:36048 yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc rProperty
+R36064:36071 Coq.Numbers.BinNums <> positive ind
+R36076:36079 Coq.Init.Logic <> True ind
+def 36095:36099 yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc fUnit
+def 36121:36127 yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc fInterp
+def 36149:36155 yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc fAdvice
+R36168:36237 Top.mapred_config_fields yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc <> mod
+R36316:36333 Top.fieldType FieldModuleFunctor <> modtype
+R36335:36404 Top.mapred_config_fields yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size_desc <> modtype
+mod 36247:36311 <> yarn_app_mapreduce_am_containerlauncher_threadpool__initial__size
+R36553:36568 Top.fieldType Field_ModuleType <> mod
+mod 36491:36548 <> yarn_app_mapreduce_am_job_task_listener_thread__count_desc
+def 36584:36588 yarn_app_mapreduce_am_job_task_listener_thread__count_desc fName
+def 36662:36666 yarn_app_mapreduce_am_job_task_listener_thread__count_desc rTipe
+R36671:36679 Top.fieldType <> rTipe_pos constr
+def 36695:36703 yarn_app_mapreduce_am_job_task_listener_thread__count_desc rProperty
+R36719:36726 Coq.Numbers.BinNums <> positive ind
+R36731:36734 Coq.Init.Logic <> True ind
+def 36750:36754 yarn_app_mapreduce_am_job_task_listener_thread__count_desc fUnit
+def 36776:36782 yarn_app_mapreduce_am_job_task_listener_thread__count_desc fInterp
+def 36804:36810 yarn_app_mapreduce_am_job_task_listener_thread__count_desc fAdvice
+R36823:36880 Top.mapred_config_fields yarn_app_mapreduce_am_job_task_listener_thread__count_desc <> mod
+R36947:36964 Top.fieldType FieldModuleFunctor <> modtype
+R36966:37023 Top.mapred_config_fields yarn_app_mapreduce_am_job_task_listener_thread__count_desc <> modtype
+mod 36890:36942 <> yarn_app_mapreduce_am_job_task_listener_thread__count
+R37149:37164 Top.fieldType Field_ModuleType <> mod
+mod 37098:37144 <> yarn_app_mapreduce_am_resource_cpu__vcores_desc
+def 37180:37184 yarn_app_mapreduce_am_resource_cpu__vcores_desc fName
+def 37247:37251 yarn_app_mapreduce_am_resource_cpu__vcores_desc rTipe
+R37256:37264 Top.fieldType <> rTipe_pos constr
+def 37280:37288 yarn_app_mapreduce_am_resource_cpu__vcores_desc rProperty
+R37304:37311 Coq.Numbers.BinNums <> positive ind
+R37316:37319 Coq.Init.Logic <> True ind
+def 37335:37339 yarn_app_mapreduce_am_resource_cpu__vcores_desc fUnit
+def 37361:37367 yarn_app_mapreduce_am_resource_cpu__vcores_desc fInterp
+def 37389:37395 yarn_app_mapreduce_am_resource_cpu__vcores_desc fAdvice
+R37408:37454 Top.mapred_config_fields yarn_app_mapreduce_am_resource_cpu__vcores_desc <> mod
+R37510:37527 Top.fieldType FieldModuleFunctor <> modtype
+R37529:37575 Top.mapred_config_fields yarn_app_mapreduce_am_resource_cpu__vcores_desc <> modtype
+mod 37464:37505 <> yarn_app_mapreduce_am_resource_cpu__vcores
+R37680:37695 Top.fieldType Field_ModuleType <> mod
+mod 37638:37675 <> yarn_app_mapreduce_am_resource_mb_desc
+def 37711:37715 yarn_app_mapreduce_am_resource_mb_desc fName
+def 37770:37774 yarn_app_mapreduce_am_resource_mb_desc rTipe
+R37779:37787 Top.fieldType <> rTipe_pos constr
+def 37846:37854 yarn_app_mapreduce_am_resource_mb_desc rProperty
+R37870:37877 Coq.Numbers.BinNums <> positive ind
+R37882:37887 Coq.PArith.BinPos Pos lt def
+R37896:37910 Top.env_desc <> env_phys_mem_mb proj
+R37912:37916 Top.env_desc <> myEnv def
+R37889:37893 Top.mapred_config_fields <> value var
+def 37933:37937 yarn_app_mapreduce_am_resource_mb_desc fUnit
+def 37959:37965 yarn_app_mapreduce_am_resource_mb_desc fInterp
+def 37987:37993 yarn_app_mapreduce_am_resource_mb_desc fAdvice
+R38006:38043 Top.mapred_config_fields yarn_app_mapreduce_am_resource_mb_desc <> mod
+R38090:38107 Top.fieldType FieldModuleFunctor <> modtype
+R38109:38146 Top.mapred_config_fields yarn_app_mapreduce_am_resource_mb_desc <> modtype
+mod 38053:38085 <> yarn_app_mapreduce_am_resource_mb
