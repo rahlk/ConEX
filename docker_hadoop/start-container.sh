@@ -4,9 +4,9 @@
 N=8
 
 # start hadoop master container
-sudo docker rm -f hadoop-master &> /dev/null
+docker rm -f hadoop-master &> /dev/null
 echo "Starting hadoop-master container..."
-sudo docker run -itd \
+docker run -itd \
                 --net=hadoop \
                 -p 50070:50070 \
                 -p 8088:8088 \
@@ -19,9 +19,9 @@ sudo docker run -itd \
 i=0
 while [ $i -lt $N ]
 do
-	sudo docker rm -f hadoop-worker$i &> /dev/null
+	docker rm -f hadoop-worker$i &> /dev/null
 	echo "Starting hadoop-worker$i container..."
-	sudo docker run -itd \
+	docker run -itd \
 	                --net=hadoop \
 	                --name hadoop-worker$i \
 	                --hostname hadoop-worker$i \

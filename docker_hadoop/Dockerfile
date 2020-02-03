@@ -24,7 +24,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 RUN wget -O ~/.vimrc https://gist.githubusercontent.com/rahlk/78d3d8f188a099dfd5114c35176e391d/raw/ed47d4fee79b5e177cb008abb319ebe4b542fc75/.vimrc
 
 #----- Install hadoop 2.7.4 -----
-COPY hadoop-2.7.4.tar.gz hadoop-2.7.4.tar.gz
+RUN wget -O hadoop-2.7.4.tar.gz https://archive.apache.org/dist/hadoop/core/hadoop-2.7.4/hadoop-2.7.4.tar.gz
 RUN tar -xf hadoop-2.7.4.tar.gz
 RUN mv hadoop-2.7.4 /usr/local/hadoop-2.7.4
 RUN rm hadoop-2.7.4.tar.gz
@@ -52,7 +52,10 @@ RUN mkdir -p ~/hdfs/namenode && \
   mkdir $HADOOP_HOME/logs
 
 #----- Copy over config files -----
-COPY config/* /tmp/
+COPY ./config* /tmp/
+
+#----- Mount HiBench -----
+RUN git clone https://github.com/Intel-bigdata/HiBench /root/HiBench
 
 RUN mv /tmp/ssh_config ~/.ssh/config && \
   mv /tmp/slaves $HADOOP_HOME/etc/hadoop/slaves && \
@@ -61,12 +64,10 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
   mv /tmp/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml && \
   mv /tmp/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml && \
   mv /tmp/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
+  mv /tmp/hadoop.conf /root/HiBench/conf && \
   mv /tmp/frameworks.lst /root/HiBench/conf && \
   mv /tmp/benchmarks.lst /root/HiBench/conf && \
   mv /tmp/start-hadoop.sh ~/start-hadoop.sh
-
-#----- Mount HiBench -----
-ADD HiBench /root/HiBench
 
 #----- Clone lastest ConEX code -----
 RUN git config --global user.name "rahlk" && \
@@ -77,14 +78,11 @@ RUN git config --global user.name "rahlk" && \
 WORKDIR /root/conexer
 RUN pip install -r requirements.txt
 
-
 #----- Set new workdir to HiBench -----
 WORKDIR /root/HiBench
 
 #----- Build HiBench -----
 RUN mvn -Phadoopbench clean package
-
-RUN cp conf/hadoop.docker.conf.template conf/hadoop.conf
 
 #----- Set new workdir to root -----
 WORKDIR /root
