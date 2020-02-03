@@ -33,9 +33,10 @@ done
 echo "Starting DFS and YARN..."
 docker exec -it hadoop-master /root/start-hadoop.sh > /dev/null
 
-# # -- Prepare HiBench data --
-# echo "Starting Hibench data..."
-# docker exec -it hadoop-master bin/workloads/micro/wordcount/prepare/prepare.sh > /dev/null
+# -- Prepare HiBench data --
+echo "Starting ConEX on Hadoop..."
+docker exec -it hadoop-master conexer/run_hadoop.sh
+
 # # -- Run HiBench Benchmark --
 # echo "Running HiBench Benchmark..."
 # docker exec -it hadoop-master bin/workloads/micro/wordcount/hadoop/run.sh > /dev/null
