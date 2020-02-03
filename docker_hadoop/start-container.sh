@@ -20,25 +20,26 @@ sudo docker run -itd \
 i=1
 while [ $i -lt $N ]
 do
-	sudo docker rm -f hadoop-slave$i &> /dev/null
-	echo "Starting hadoop-slave$i container..."
+	sudo docker rm -f hadoop-worker$i &> /dev/null
+	echo "Starting hadoop-worker$i container..."
 	sudo docker run -itd \
 	                --net=hadoop \
-	                --name hadoop-slave$i \
-	                --hostname hadoop-slave$i \
+	                --name hadoop-worker$i \
+	                --hostname hadoop-worker$i \
 	                kiwenlau/hadoop:1.0 &> /dev/null
 	i=$(( $i + 1 ))
 done
 
 # -- Start hadoop --
 echo "Starting DFS and YARN..."
-docker exec -it hadoop-master ../start-hadoop.sh > /dev/null
-# -- Prepare HiBench data --
-echo "Starting Hibench data..."
-docker exec -it hadoop-master bin/workloads/micro/wordcount/prepare/prepare.sh > /dev/null
-# -- Run HiBench Benchmark --
-echo "Running HiBench Benchmark..."
-docker exec -it hadoop-master bin/workloads/micro/wordcount/hadoop/run.sh > /dev/null
-# -- Print the report --
-echo ""
-docker exec -it hadoop-master cat report/hibench.report
+docker exec -it hadoop-master /root/start-hadoop.sh > /dev/null
+
+# # -- Prepare HiBench data --
+# echo "Starting Hibench data..."
+# docker exec -it hadoop-master bin/workloads/micro/wordcount/prepare/prepare.sh > /dev/null
+# # -- Run HiBench Benchmark --
+# echo "Running HiBench Benchmark..."
+# docker exec -it hadoop-master bin/workloads/micro/wordcount/hadoop/run.sh > /dev/null
+# # -- Print the report --
+# echo ""
+# docker exec -it hadoop-master cat report/hibench.report

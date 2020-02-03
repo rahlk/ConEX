@@ -1,8 +1,0 @@
-I plan to develop a framework that can be easily instantiated to create a
-configuration exploration tool for any configurable software system.
-
-Although the current implementation can also be easily modified to create a
-tool for other systems, it's not so easy to do so.
-
-This is on-going...I will update it as I modifying the current tool to make a
-Spark configuration exploration tool.
