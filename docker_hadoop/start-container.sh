@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # the default node number is 3
-N=5
-
+N=8
 
 # start hadoop master container
 sudo docker rm -f hadoop-master &> /dev/null
@@ -17,7 +16,7 @@ sudo docker run -itd \
 
 
 # start hadoop slave container
-i=1
+i=0
 while [ $i -lt $N ]
 do
 	sudo docker rm -f hadoop-worker$i &> /dev/null
