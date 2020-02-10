@@ -13,6 +13,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
   git maven bc        \
   openssh-server wget \
   build-essential     \
+  python-setuptools   \
   python2.7           \
   python2.7-dev       \
   python-pip &&       \
