@@ -1,0 +1,2583 @@
+Starting hadoop-master container...
+Starting hadoop-worker0 container...
+Starting hadoop-worker1 container...
+Starting hadoop-worker2 container...
+Starting hadoop-worker3 container...
+Starting hadoop-worker4 container...
+Starting hadoop-worker5 container...
+Starting hadoop-worker6 container...
+Starting hadoop-worker7 container...
+Starting DFS and YARN...
+Starting ConEX on Hadoop...
+default configuration:
+{'mapreduce.job.max.split.locations': '10', 'mapreduce.reduce.input.buffer.percent': '0.0', 'mapreduce.output.fileoutputformat.compress': 'false', 'mapreduce.map.speculative': 'true', 'mapreduce.reduce.shuffle.merge.percent': '0.66', 'mapreduce.job.jvm.numtasks': '1', 'yarn.app.mapreduce.am.resource.mb': '2880', 'mapreduce.map.java.opts': '-Xmx3072m', 'mapreduce.input.fileinputformat.split.minsize': '0', 'mapreduce.job.ubertask.enable': 'false', 'mapreduce.task.io.sort.factor': '10', 'mapreduce.shuffle.max.connections': '0', 'mapreduce.job.reduce.slowstart.completedmaps': '0.05', 'mapreduce.reduce.shuffle.memory.limit.percent': '0.25', 'mapreduce.output.fileoutputformat.compress.type': 'RECORD', 'mapreduce.reduce.java.opts': '-Xmx6144m', 'dfs.blocksize': '134217728', 'mapreduce.reduce.merge.inmem.threshold': '1000', 'dfs.replication': '1', 'mapreduce.map.sort.spill.percent': '0.80', 'mapreduce.map.memory.mb': '4096', 'io.file.buffer.size': '65536', 'yarn.resourcemanager.store.class': 'org.apache.hadoop.yarn.server.resourcemanager.recovery.FileSystemRMStateStore', 'mapreduce.reduce.memory.mb': '8192', 'yarn.nodemanager.vmem-check-enabled': 'false', 'io.seqfile.sorter.recordlimit': '1000000', 'mapreduce.tasktracker.map.tasks.maximum': '2', 'yarn.nodemanager.vmem-pmem-ratio': '2.1', 'mapreduce.output.fileoutputformat.compress.codec': 'org.apache.hadoop.io.compress.DefaultCodec', 'mapreduce.reduce.cpu.vcores': '1', 'mapreduce.map.cpu.vcores': '1', 'yarn.resourcemanager.scheduler.class': 'org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler', 'mapreduce.job.ubertask.maxreduces': '1', 'mapreduce.tasktracker.reduce.tasks.maximum': '2', 'mapreduce.map.output.compress.codec': 'org.apache.hadoop.io.compress.DefaultCodec', 'mapreduce.shuffle.max.threads': '0', 'mapreduce.map.output.compress': 'false', 'io.seqfile.compress.blocksize': '1000000', 'mapreduce.reduce.shuffle.parallelcopies': '5', 'mapreduce.reduce.shuffle.input.buffer.percent': '0.70', 'mapreduce.job.ubertask.maxmaps': '9', 'mapreduce.tasktracker.http.threads': '40', 'yarn.app.mapreduce.am.resource.cpu-vcores': '1', 'mapreduce.input.fileinputformat.split.maxsize': '268435456', 'mapreduce.task.io.sort.mb': '100', 'yarn.app.mapreduce.am.command-opts': '-Xmx1024m'}
+2020-06-02 05:41:18 0 benchmark done! Performance:  8190
+Default performance. Profile num: 0 === Performance: 8190
+2020-06-02 05:43:16 1 benchmark done! Performance:  14790
+2020-06-02 05:45:15 2 benchmark done! Performance:  8923
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:45:19 GMT 2020
+Job ended: Thu Feb 06 05:45:30 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:45:42 3 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 4
+type-checking failed, config 5
+type-checking failed, config 6
+type-checking failed, config 7
+2020-06-02 05:47:39 8 benchmark done! Performance:  8503
+2020-06-02 05:49:36 9 benchmark done! Performance:  8963
+type-checking failed, config 10
+type-checking failed, config 11
+type-checking failed, config 12
+type-checking failed, config 13
+type-checking failed, config 14
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:49:43 GMT 2020
+Job ended: Thu Feb 06 05:49:56 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:50:36 15 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 16
+2020-06-02 05:52:35 17 benchmark done! Performance:  10126
+type-checking failed, config 18
+type-checking failed, config 19
+2020-06-02 05:54:38 20 benchmark done! Performance:  18456
+type-checking failed, config 21
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:54:43 GMT 2020
+Job ended: Thu Feb 06 05:54:56 GMT 2020
+The job took 13 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:55:36 22 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 23
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:55:41 GMT 2020
+Job ended: Thu Feb 06 05:55:51 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:56:32 24 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 25
+type-checking failed, config 26
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:56:37 GMT 2020
+Job ended: Thu Feb 06 05:56:47 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:57:28 27 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 28
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:57:32 GMT 2020
+Job ended: Thu Feb 06 05:57:43 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:58:23 29 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 30
+type-checking failed, config 31
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:58:28 GMT 2020
+Job ended: Thu Feb 06 05:58:40 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:59:20 32 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:59:24 GMT 2020
+Job ended: Thu Feb 06 05:59:36 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 05:59:48 33 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 05:59:52 GMT 2020
+Job ended: Thu Feb 06 06:00:03 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:00:43 34 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 35
+type-checking failed, config 36
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:00:48 GMT 2020
+Job ended: Thu Feb 06 06:01:00 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:01:40 37 benchmark done! Performance:  9223372036854775807
+2020-06-02 06:03:36 38 benchmark done! Performance:  9730
+2020-06-02 06:05:33 39 benchmark done! Performance:  9710
+type-checking failed, config 40
+type-checking failed, config 41
+type-checking failed, config 42
+type-checking failed, config 43
+2020-06-02 06:07:35 44 benchmark done! Performance:  15323
+type-checking failed, config 45
+2020-06-02 06:09:35 46 benchmark done! Performance:  10436
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:09:39 GMT 2020
+Job ended: Thu Feb 06 06:09:50 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:10:01 47 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 48
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:10:06 GMT 2020
+Job ended: Thu Feb 06 06:10:18 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:10:58 49 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:11:02 GMT 2020
+Job ended: Thu Feb 06 06:11:14 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:11:54 50 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 51
+type-checking failed, config 52
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:11:59 GMT 2020
+Job ended: Thu Feb 06 06:12:09 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:12:20 53 benchmark done! Performance:  9223372036854775807
+2020-06-02 06:14:19 54 benchmark done! Performance:  10330
+2020-06-02 06:16:15 55 benchmark done! Performance:  16846
+type-checking failed, config 56
+type-checking failed, config 57
+type-checking failed, config 58
+type-checking failed, config 59
+type-checking failed, config 60
+type-checking failed, config 61
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:16:22 GMT 2020
+Job ended: Thu Feb 06 06:16:32 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:17:13 62 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:17:17 GMT 2020
+Job ended: Thu Feb 06 06:17:27 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:18:08 63 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 64
+2020-06-02 06:20:05 65 benchmark done! Performance:  10330
+2020-06-02 06:21:59 66 benchmark done! Performance:  10966
+type-checking failed, config 67
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:22:03 GMT 2020
+Job ended: Thu Feb 06 06:22:16 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:22:28 68 benchmark done! Performance:  9223372036854775807
+2020-06-02 06:24:33 69 benchmark done! Performance:  11016
+type-checking failed, config 70
+type-checking failed, config 71
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:24:38 GMT 2020
+Job ended: Thu Feb 06 06:24:50 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:25:30 72 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:25:34 GMT 2020
+Job ended: Thu Feb 06 06:25:46 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:26:27 73 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 74
+type-checking failed, config 75
+2020-06-02 06:28:22 76 benchmark done! Performance:  10470
+type-checking failed, config 77
+type-checking failed, config 78
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:28:27 GMT 2020
+Job ended: Thu Feb 06 06:28:38 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:29:18 79 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 80
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:29:23 GMT 2020
+Job ended: Thu Feb 06 06:29:34 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:30:15 81 benchmark done! Performance:  9223372036854775807
+2020-06-02 06:32:14 82 benchmark done! Performance:  10703
+2020-06-02 06:34:14 83 benchmark done! Performance:  10686
+type-checking failed, config 84
+2020-06-02 06:36:14 85 benchmark done! Performance:  11693
+type-checking failed, config 86
+2020-06-02 06:38:10 87 benchmark done! Performance:  10973
+type-checking failed, config 88
+type-checking failed, config 89
+2020-06-02 06:40:11 90 benchmark done! Performance:  15400
+2020-06-02 06:42:10 91 benchmark done! Performance:  10093
+type-checking failed, config 92
+2020-06-02 06:44:05 93 benchmark done! Performance:  11043
+type-checking failed, config 94
+type-checking failed, config 95
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:44:10 GMT 2020
+Job ended: Thu Feb 06 06:44:21 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:45:02 96 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 97
+2020-06-02 06:46:57 98 benchmark done! Performance:  10490
+type-checking failed, config 99
+2020-06-02 06:48:54 100 benchmark done! Performance:  10756
+type-checking failed, config 101
+2020-06-02 06:50:52 102 benchmark done! Performance:  10730
+2020-06-02 06:52:49 103 benchmark done! Performance:  10150
+2020-06-02 06:54:45 104 benchmark done! Performance:  12513
+type-checking failed, config 105
+2020-06-02 06:56:41 106 benchmark done! Performance:  11366
+type-checking failed, config 107
+2020-06-02 06:58:36 108 benchmark done! Performance:  12663
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:58:40 GMT 2020
+Job ended: Thu Feb 06 06:58:53 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 06:59:33 109 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 06:59:37 GMT 2020
+Job ended: Thu Feb 06 06:59:48 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:00:29 110 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 111
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:00:33 GMT 2020
+Job ended: Thu Feb 06 07:00:45 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:00:56 112 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:02:54 113 benchmark done! Performance:  11586
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:02:58 GMT 2020
+Job ended: Thu Feb 06 07:03:09 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:03:20 114 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 115
+type-checking failed, config 116
+type-checking failed, config 117
+type-checking failed, config 118
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:03:26 GMT 2020
+Job ended: Thu Feb 06 07:03:39 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:04:19 119 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:04:23 GMT 2020
+Job ended: Thu Feb 06 07:04:35 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:05:15 120 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 121
+2020-06-02 07:07:11 122 benchmark done! Performance:  11260
+type-checking failed, config 123
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:07:16 GMT 2020
+Job ended: Thu Feb 06 07:07:27 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:07:38 124 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:09:36 125 benchmark done! Performance:  11210
+2020-06-02 07:11:34 126 benchmark done! Performance:  10803
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:11:38 GMT 2020
+Job ended: Thu Feb 06 07:11:50 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:12:30 127 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 128
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:12:35 GMT 2020
+Job ended: Thu Feb 06 07:12:45 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:13:26 129 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:15:23 130 benchmark done! Performance:  10936
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:15:27 GMT 2020
+Job ended: Thu Feb 06 07:15:38 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:16:18 131 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 132
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:16:23 GMT 2020
+Job ended: Thu Feb 06 07:16:35 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:17:15 133 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:19:15 134 benchmark done! Performance:  10980
+type-checking failed, config 135
+type-checking failed, config 136
+2020-06-02 07:21:15 137 benchmark done! Performance:  10956
+type-checking failed, config 138
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:21:20 GMT 2020
+Job ended: Thu Feb 06 07:21:31 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:22:11 139 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:24:08 140 benchmark done! Performance:  12246
+2020-06-02 07:26:08 141 benchmark done! Performance:  10990
+2020-06-02 07:28:07 142 benchmark done! Performance:  11190
+type-checking failed, config 143
+type-checking failed, config 144
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:28:12 GMT 2020
+Job ended: Thu Feb 06 07:28:24 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:29:04 145 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 146
+type-checking failed, config 147
+type-checking failed, config 148
+2020-06-02 07:31:04 149 benchmark done! Performance:  10783
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:31:08 GMT 2020
+Job ended: Thu Feb 06 07:31:21 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:32:01 150 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:34:01 151 benchmark done! Performance:  13220
+type-checking failed, config 152
+type-checking failed, config 153
+type-checking failed, config 154
+2020-06-02 07:36:01 155 benchmark done! Performance:  11136
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:36:05 GMT 2020
+Job ended: Thu Feb 06 07:36:17 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:36:57 156 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 157
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:37:02 GMT 2020
+Job ended: Thu Feb 06 07:37:13 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:37:54 158 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:37:58 GMT 2020
+Job ended: Thu Feb 06 07:38:08 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:38:19 159 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:40:19 160 benchmark done! Performance:  15500
+2020-06-02 07:42:13 161 benchmark done! Performance:  11730
+type-checking failed, config 162
+type-checking failed, config 163
+type-checking failed, config 164
+type-checking failed, config 165
+type-checking failed, config 166
+type-checking failed, config 167
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:42:21 GMT 2020
+Job ended: Thu Feb 06 07:42:32 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:43:12 168 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:43:16 GMT 2020
+Job ended: Thu Feb 06 07:43:27 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:44:07 169 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 170
+type-checking failed, config 171
+type-checking failed, config 172
+type-checking failed, config 173
+type-checking failed, config 174
+2020-06-02 07:46:10 175 benchmark done! Performance:  15936
+type-checking failed, config 176
+type-checking failed, config 177
+type-checking failed, config 178
+type-checking failed, config 179
+type-checking failed, config 180
+type-checking failed, config 181
+2020-06-02 07:48:13 182 benchmark done! Performance:  10720
+type-checking failed, config 183
+type-checking failed, config 184
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:48:18 GMT 2020
+Job ended: Thu Feb 06 07:48:31 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:49:11 185 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 186
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:49:15 GMT 2020
+Job ended: Thu Feb 06 07:49:28 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:50:08 187 benchmark done! Performance:  9223372036854775807
+2020-06-02 07:52:11 188 benchmark done! Performance:  21946
+2020-06-02 07:54:11 189 benchmark done! Performance:  11633
+type-checking failed, config 190
+type-checking failed, config 191
+type-checking failed, config 192
+type-checking failed, config 193
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:54:17 GMT 2020
+Job ended: Thu Feb 06 07:54:29 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 07:55:09 194 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 195
+type-checking failed, config 196
+type-checking failed, config 197
+2020-06-02 07:57:11 198 benchmark done! Performance:  11090
+2020-06-02 07:59:12 199 benchmark done! Performance:  11383
+type-checking failed, config 200
+===== size less than 1/10 of population_size, recreate a set of initial configurations ====
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 07:59:16 GMT 2020
+Job ended: Thu Feb 06 07:59:28 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:00:08 201 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 202
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:00:12 GMT 2020
+Job ended: Thu Feb 06 08:00:23 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:01:04 203 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 204
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:01:08 GMT 2020
+Job ended: Thu Feb 06 08:01:19 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:02:00 205 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 206
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:02:04 GMT 2020
+Job ended: Thu Feb 06 08:02:16 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:02:56 207 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 208
+2020-06-02 08:05:00 209 benchmark done! Performance:  18136
+2020-06-02 08:07:03 210 benchmark done! Performance:  11176
+2020-06-02 08:09:02 211 benchmark done! Performance:  11153
+2020-06-02 08:10:59 212 benchmark done! Performance:  12190
+2020-06-02 08:13:00 213 benchmark done! Performance:  12893
+2020-06-02 08:15:00 214 benchmark done! Performance:  13110
+type-checking failed, config 215
+type-checking failed, config 216
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:15:06 GMT 2020
+Job ended: Thu Feb 06 08:15:17 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:15:57 217 benchmark done! Performance:  9223372036854775807
+2020-06-02 08:17:55 218 benchmark done! Performance:  14026
+type-checking failed, config 219
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:18:00 GMT 2020
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/prepare/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:18:01 220 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 221
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:18:06 GMT 2020
+Job ended: Thu Feb 06 08:18:19 GMT 2020
+The job took 12 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:18:59 222 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 223
+type-checking failed, config 224
+2020-06-02 08:21:02 225 benchmark done! Performance:  15463
+2020-06-02 08:22:59 226 benchmark done! Performance:  14920
+type-checking failed, config 227
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:23:04 GMT 2020
+Job ended: Thu Feb 06 08:23:15 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:23:56 228 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:24:00 GMT 2020
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/prepare/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:24:01 229 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 230
+2020-06-02 08:26:11 231 benchmark done! Performance:  35520
+type-checking failed, config 232
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:26:16 GMT 2020
+Job ended: Thu Feb 06 08:26:27 GMT 2020
+The job took 10 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:27:07 233 benchmark done! Performance:  9223372036854775807
+2020-06-02 08:29:16 234 benchmark done! Performance:  30336
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:29:21 GMT 2020
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/prepare/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:29:22 235 benchmark done! Performance:  9223372036854775807
+2020-06-02 08:31:23 236 benchmark done! Performance:  12333
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 255
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000 -D mapreduce.randomtextwriter.bytespermap=4000 -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 8 maps.
+Job started: Thu Feb 06 08:31:27 GMT 2020
+Job ended: Thu Feb 06 08:31:39 GMT 2020
+The job took 11 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=8 -D mapreduce.job.reduces=8 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 08:32:19 237 benchmark done! Performance:  9223372036854775807
+2020-06-02 08:34:20 238 benchmark done! Performance:  12336
+wait timeout: 153.260622025 kill process..., avg_run_time: 153.260622025
+Profiler: execute [u'/root/HiBench/bin/run_all.sh'] failed. Exit msg = global name 'p' is not defined
+run benchmark command is not success, exit..
+2020-06-02 09:57:29 239 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:57:36 240 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:57:43 241 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:57:49 242 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:57:56 243 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:03 244 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 245
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:10 246 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:16 247 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:23 248 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:30 249 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 250
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:37 251 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 252
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:44 253 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:51 254 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:58:58 255 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 256
+type-checking failed, config 257
+type-checking failed, config 258
+type-checking failed, config 259
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:06 260 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:13 261 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:20 262 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 263
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:27 264 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:34 265 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:40 266 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 267
+type-checking failed, config 268
+type-checking failed, config 269
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:48 270 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 09:59:55 271 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:02 272 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 273
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:09 274 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:15 275 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 276
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:23 277 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:29 278 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 279
+type-checking failed, config 280
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:37 281 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:44 282 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:50 283 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:00:57 284 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:01:04 285 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 286
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:01:11 287 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:01:18 288 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:01:25 289 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 290
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:01:34 291 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:02:08 292 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:02:15 293 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:02:24 294 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:02:37 295 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 296
+type-checking failed, config 297
+type-checking failed, config 298
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:04:00 299 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:04:07 300 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:04:16 301 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:04:36 302 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:04:43 303 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:04:51 304 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:05:04 305 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:05:11 306 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 307
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:05:20 308 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:05:43 309 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:05:50 310 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:05:58 311 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 312
+type-checking failed, config 313
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:08:40 314 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:08:47 315 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:08:55 316 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 317
+type-checking failed, config 318
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:10:26 319 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 320
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:10:34 321 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:10:41 322 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 323
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:13:24 324 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:13:31 325 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:13:39 326 benchmark done! Performance:  9223372036854775807
+type-checking failed, config 327
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:14:45 328 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:14:51 329 benchmark done! Performance:  9223372036854775807
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+ERROR: micro/wordcount prepare failed!
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-06-02 10:15:00 330 benchmark done! Performance:  9223372036854775807
+conexer/run_hadoop.sh: line 36:   838 Killed                  python -u main.py 300
