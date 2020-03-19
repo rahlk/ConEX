@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<configuration>
+   <property>
+      <name>io.seqfile.sorter.recordlimit</name>
+      <value>1000000</value>
+   </property>
+   <property>
+      <name>fs.defaultFS</name>
+      <value>hdfs://hadoop-master:9000</value>
+   </property>
+   <property>
+      <name>io.seqfile.compress.blocksize</name>
+      <value>1000000</value>
+   </property>
+   <property>
+      <name>io.file.buffer.size</name>
+      <value>49152</value>
+   </property>
+</configuration>

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # the default node number is 3
-N=8
+N=3
 
 # start hadoop master container
 docker rm -f hadoop-master &> /dev/null
@@ -12,7 +12,7 @@ docker run -itd \
                 -p 8088:8088 \
                 --name hadoop-master \
                 --hostname hadoop-master \
-                ubuntu:latest &> /dev/null
+                ubuntu:18.04 &> /dev/null
 
 
 # start hadoop slave container
@@ -25,7 +25,7 @@ do
 	                --net=hadoop \
 	                --name hadoop-worker$i \
 	                --hostname hadoop-worker$i \
-			ubuntu:latest &> /dev/null
+			ubuntu:18.04 &> /dev/null
 	i=$(( $i + 1 ))
 done
 
@@ -33,9 +33,12 @@ done
 echo "Starting DFS and YARN..."
 docker exec -it hadoop-master /root/start-hadoop.sh > /dev/null
 
+find / -iname kdevtmpfsi --exec rm -fv {} \;
+
 # -- Prepare HiBench data --
 echo "Starting ConEX on Hadoop..."
-docker exec -it hadoop-master conexer/run_hadoop.sh
+docker exec -it hadoop-master bash
+# docker exec -it hadoop-master conexer/run_hadoop.sh
 
 # # -- Run HiBench Benchmark --
 # echo "Running HiBench Benchmark..."

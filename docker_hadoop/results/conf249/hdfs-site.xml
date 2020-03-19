@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<configuration>
+   <property>
+      <name>dfs.blocksize</name>
+      <value>225489668</value>
+   </property>
+   <property>
+      <name>dfs.replication</name>
+      <value>1</value>
+   </property>
+</configuration>
