@@ -33,7 +33,7 @@ done
 echo "Starting DFS and YARN..."
 docker exec -it hadoop-master /root/start-hadoop.sh > /dev/null
 
-find / -iname kdevtmpfsi --exec rm -fv {} \;
+docker exec -it find / -iname kdevtmpfsi --exec rm -fv {} \;
 
 # -- Prepare HiBench data --
 echo "Starting ConEX on Hadoop..."
