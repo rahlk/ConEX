@@ -24,14 +24,21 @@ def run_os_cmd(cmd_str):
 def main():
     # Copy the HiBench Config over the master node
     run_os_cmd("docker cp config/hibench.conf hadoop-master:/root/HiBench/conf/")
-    # Backup default hadoop configurations
-    run_os_cmd(
-        "docker exec -it hadoop-master cp -r /usr/local/hadoop-2.7.4/etc/hadoop/ /root/hadoop_defaults")
+
+    # # Run default configurations
+    # run_os_cmd(
+    #     "docker exec -it hadoop-master /root/HiBench/bin/run_all.sh")
+    # run_os_cmd(
+    #     "docker exec -it hadoop-master cat /root/HiBench/report/wordcount/hadoop/bench.log | grep 'CPU time spent' | sed 's/\t//g' | sed 's/CPU time spent (ms)=//g' | tee -a scale_up_small_to_huge.txt")
+
+    # # Backup default hadoop configurations
+    # run_os_cmd(
+    #     "docker exec -it hadoop-master cp -r /usr/local/hadoop-2.7.4/etc/hadoop/ /root/hadoop_defaults")
     cur_dir = Path.cwd()
     res_dir = cur_dir.joinpath("results")
     small_res = pd.read_csv(res_dir.joinpath("hadoop_small_results.csv"))
     small_res = small_res.sort_values(
-        by="Perf").reset_index(drop=True).iloc[:50]
+        by="Perf").reset_index(drop=True).iloc[48:50]
     working_confs = set(small_res["Conf"].values.astype("str").tolist())
 
     # Loop through every folder
