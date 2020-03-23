@@ -1,5 +1,0 @@
-CPU time spent (ms)=9390
-CPU time spent (ms)=9390
-CPU time spent (ms)=9390
-CPU time spent (ms)=9390
-9390
