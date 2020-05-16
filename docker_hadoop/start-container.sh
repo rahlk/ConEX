@@ -33,12 +33,12 @@ done
 echo "Starting DFS and YARN..."
 docker exec -it hadoop-master /root/start-hadoop.sh > /dev/null
 
-docker exec -it find / -iname kdevtmpfsi --exec rm -fv {} \;
+# -- Copy over HiBench copy --
+docker cp config/hibench.conf hadoop-master:/root/HiBench/conf/
 
 # -- Prepare HiBench data --
 echo "Starting ConEX on Hadoop..."
-docker exec -it hadoop-master bash
-# docker exec -it hadoop-master conexer/run_hadoop.sh
+docker exec -it hadoop-master conexer/run_hadoop.sh
 
 # # -- Run HiBench Benchmark --
 # echo "Running HiBench Benchmark..."

@@ -68,6 +68,7 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
   mv /tmp/hadoop.conf /root/HiBench/conf && \
   mv /tmp/frameworks.lst /root/HiBench/conf && \
   mv /tmp/benchmarks.lst /root/HiBench/conf && \
+  mv /tmp/hibench.conf /root/HiBench/conf && \
   mv /tmp/start-hadoop.sh ~/start-hadoop.sh
 
 #----- Clone lastest ConEX code -----
