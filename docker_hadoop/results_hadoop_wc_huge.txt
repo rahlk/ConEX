@@ -6,7 +6,33 @@ Starting DFS and YARN...
 Starting ConEX on Hadoop...
 default configuration:
 {'mapreduce.job.max.split.locations': '10', 'mapreduce.reduce.input.buffer.percent': '0.0', 'mapreduce.output.fileoutputformat.compress': 'false', 'mapreduce.map.speculative': 'true', 'mapreduce.reduce.shuffle.merge.percent': '0.66', 'mapreduce.job.jvm.numtasks': '1', 'yarn.app.mapreduce.am.resource.mb': '2880', 'mapreduce.map.java.opts': '-Xmx3072m', 'mapreduce.input.fileinputformat.split.minsize': '0', 'mapreduce.job.ubertask.enable': 'false', 'mapreduce.task.io.sort.factor': '10', 'mapreduce.shuffle.max.connections': '0', 'mapreduce.job.reduce.slowstart.completedmaps': '0.05', 'mapreduce.reduce.shuffle.memory.limit.percent': '0.25', 'mapreduce.output.fileoutputformat.compress.type': 'RECORD', 'mapreduce.reduce.java.opts': '-Xmx6144m', 'dfs.blocksize': '134217728', 'mapreduce.reduce.merge.inmem.threshold': '1000', 'dfs.replication': '1', 'mapreduce.map.sort.spill.percent': '0.80', 'mapreduce.map.memory.mb': '4096', 'io.file.buffer.size': '65536', 'yarn.resourcemanager.store.class': 'org.apache.hadoop.yarn.server.resourcemanager.recovery.FileSystemRMStateStore', 'mapreduce.reduce.memory.mb': '8192', 'yarn.nodemanager.vmem-check-enabled': 'false', 'io.seqfile.sorter.recordlimit': '1000000', 'mapreduce.tasktracker.map.tasks.maximum': '2', 'yarn.nodemanager.vmem-pmem-ratio': '2.1', 'mapreduce.output.fileoutputformat.compress.codec': 'org.apache.hadoop.io.compress.DefaultCodec', 'mapreduce.reduce.cpu.vcores': '1', 'mapreduce.map.cpu.vcores': '1', 'yarn.resourcemanager.scheduler.class': 'org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler', 'mapreduce.job.ubertask.maxreduces': '1', 'mapreduce.tasktracker.reduce.tasks.maximum': '2', 'mapreduce.map.output.compress.codec': 'org.apache.hadoop.io.compress.DefaultCodec', 'mapreduce.shuffle.max.threads': '0', 'mapreduce.map.output.compress': 'false', 'io.seqfile.compress.blocksize': '1000000', 'mapreduce.reduce.shuffle.parallelcopies': '5', 'mapreduce.reduce.shuffle.input.buffer.percent': '0.70', 'mapreduce.job.ubertask.maxmaps': '9', 'mapreduce.tasktracker.http.threads': '40', 'yarn.app.mapreduce.am.resource.cpu-vcores': '1', 'mapreduce.input.fileinputformat.split.maxsize': '268435456', 'mapreduce.task.io.sort.mb': '100', 'yarn.app.mapreduce.am.command-opts': '-Xmx1024m'}
-2020-16-05 20:51:50 0 benchmark done! Performance:  4222190
-Default performance. Profile num: 0 === Performance: 4222190
-type-checking failed, config 1
-type-checking failed, config 2
+***return is not 0 *** cmd: [u'/root/HiBench/bin/run_all.sh'] return code: 1
+Prepare micro.wordcount ...
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/prepare/prepare.sh
+patching args=
+start HadoopPrepareWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar randomtextwriter -D mapreduce.randomtextwriter.totalbytes=32000000000 -D mapreduce.randomtextwriter.bytespermap=2000000000 -D mapreduce.job.maps=16 -D mapreduce.job.reduces=16 hdfs://hadoop-master:9000/HiBench/Wordcount/Input
+Running 16 maps.
+Job started: Sun May 17 20:51:37 GMT 2020
+Job ended: Sun May 17 20:53:19 GMT 2020
+The job took 102 seconds.
+finish HadoopPrepareWordcount bench
+Run micro/wordcount/hadoop
+Exec script: /root/HiBench/bin/workloads/micro/wordcount/hadoop/run.sh
+patching args=
+start HadoopWordcount bench
+Deleted hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+Submit MapReduce Job: /usr/local/hadoop-2.7.4/bin/hadoop --config /usr/local/hadoop-2.7.4/etc/hadoop jar /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount -D mapreduce.job.maps=16 -D mapreduce.job.reduces=16 -D mapreduce.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat -D mapreduce.job.inputformat.class=org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat -D mapreduce.job.outputformat.class=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat hdfs://hadoop-master:9000/HiBench/Wordcount/Input hdfs://hadoop-master:9000/HiBench/Wordcount/Output
+ERROR: Hadoop job /usr/local/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar wordcount failed to run successfully.
+Hint: You can goto /root/HiBench/report/wordcount/hadoop/conf/../bench.log to check for detailed log.
+Opening log tail for you:
+
+ERROR: micro/wordcount/hadoop failed to run successfully.
+
+=============
+=============
+
+run benchmark command is not success, exit..
+2020-17-05 21:08:58 0 benchmark done! Performance:  9223372036854775807
+profile default configuration failed, exit...

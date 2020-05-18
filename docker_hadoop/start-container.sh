@@ -7,6 +7,7 @@ N=3
 docker rm -f hadoop-master &> /dev/null
 echo "Starting hadoop-master container..."
 docker run -itd \
+                --cpus=1 \
                 --net=hadoop \
                 -p 50070:50070 \
                 -p 8088:8088 \
@@ -22,6 +23,7 @@ do
 	docker rm -f hadoop-worker$i &> /dev/null
 	echo "Starting hadoop-worker$i container..."
 	docker run -itd \
+                    --cpus=3 \
 	                --net=hadoop \
 	                --name hadoop-worker$i \
 	                --hostname hadoop-worker$i \
