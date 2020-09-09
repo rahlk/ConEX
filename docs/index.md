@@ -1,6 +1,6 @@
 # ConEX: Efficient Exploration of Big-Data System Configurations for Better Performance
 
-![](https://github.com/rahlk/ConEX/blob/master/logo.jpg)
+![](https://raw.githubusercontent.com/rahlk/ConEX/master/logo.jpg)
 
 ## Submission 
 
