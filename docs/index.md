@@ -4,7 +4,7 @@
 
 ## Submission 
 
-Published in IEEE Transactions on Software Engineering (TSE) 2020. ARXIV Link: [https://arxiv.org/abs/1910.09644](https://arxiv.org/abs/1910.09644]
+Published in IEEE Transactions on Software Engineering (TSE) 2020. ARXIV Link: [https://arxiv.org/abs/1910.09644](https://arxiv.org/abs/1910.09644)
 
 ## Cite as:
 ```
